@@ -13,18 +13,32 @@ body {
     font-style: italic;
     text-align: center;
 }
+
 .header{
     list-style: none;
 }
+
 .ton{
     border-radius: 50%;
     height: 100px;
 }
+
 .chain{
     border-radius: 50%;
     height: 100px;
 }
+
 .quee{
     border-radius: 50%;
     height: 100px;
+}
+
+.theartists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+}
+
+.cuadrardito {
+    padding: 5px;
 }
