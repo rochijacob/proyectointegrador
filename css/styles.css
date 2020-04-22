@@ -6,10 +6,12 @@ body {
     padding: 0;
     text-align: center;
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
 }
+
 #artistas-text {
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
@@ -19,6 +21,7 @@ a{
 
 .header{
     list-style: none;
+    text-align: center;
 }
 
 .ton{
@@ -36,7 +39,6 @@ a{
     height: 100px;
 }
 
-@media(min-width:768px){
 .theartists {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -70,25 +72,16 @@ a{
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
     }
-    .topTracks{
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-    }
-}
+}*/
 
-@media(min-width:913px){
+/* @media(min-width:913px){
     .header{
     }
     .topArtists{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     } 
-    .topTracks{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
-    }
-}
+} */
 
 /* .carousel{
     max-width: 1000px;
