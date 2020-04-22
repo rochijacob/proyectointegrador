@@ -8,7 +8,7 @@ body {
 }
 a{
     text-decoration: none;
-    color: white;
+    color: black;
 }
 #artistas-text {
     font-size: 20px;
@@ -64,18 +64,27 @@ a{
     .detail-image {
         padding: 10px;
     }
+    .header{
+        background-color: white; 
+        display: grid;
+        align-items: center;
+        padding: 20px;
+    }
     .topArtists{
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
     }
     .topTracks{
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
     }
 }
 
 @media(min-width:1175px){
     .header{
+        background-color: white; 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 7fr;
+        align-items: center;
+        padding: 10px;
     }
     .topArtists{
         display: grid;
