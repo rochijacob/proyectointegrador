@@ -4,6 +4,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 10px;
     padding: 0;
+    text-align: center;
 }
 
 #artistas-text {
@@ -11,4 +12,19 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
     text-align: center;
+}
+.header{
+    list-style: none;
+}
+.ton{
+    border-radius: 50%;
+    height: 100px;
+}
+.chain{
+    border-radius: 50%;
+    height: 100px;
+}
+.quee{
+    border-radius: 50%;
+    height: 100px;
 }
