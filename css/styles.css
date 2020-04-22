@@ -1,0 +1,143 @@
+body {
+    background-color: #222222;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+    padding: 0;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#artistas-text {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    text-align: center;
+}
+
+.header{
+    list-style: none;
+}
+
+.ton{
+    border-radius: 50%;
+    height: 100px;
+}
+
+.chain{
+    border-radius: 50%;
+    height: 100px;
+}
+
+.quee{
+    border-radius: 50%;
+    height: 100px;
+}
+
+@media(min-width:300px){
+    .theartists {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5px;
+    }
+
+    .cuadrardito {
+        padding: 5px;
+    }
+
+    .main-detail-containter {
+        background-color: #444444;
+        border-radius: 10px;
+    }
+
+    .detail-title {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .detail-tt-text {
+        font-size: 25px;
+    }
+
+    .detail-image {
+        padding: 10px;
+    }
+    .header{
+        background-color: white; 
+        display: grid;
+        align-items: center;
+        padding: 20px;
+    }
+    .topArtists{
+        display: grid;
+    }
+    .topTracks{
+        display: grid;
+    }
+}
+
+@media(min-width:1175px){
+    .header{
+        background-color: white; 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 7fr;
+        align-items: center;
+        padding: 10px;
+    }
+    .topArtists{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    } 
+    .topTracks{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* .carousel{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.text {
+    color: #f2f2f2;
+    background-color: black;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+} */
