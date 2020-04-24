@@ -9,7 +9,15 @@ body {
 
 a {
     text-decoration: none;
-    color: black;
+    color: white;
+    display: block;
+    width: 100%;
+}
+
+ul.header li {
+    padding: 3px;
+    margin: 2px;
+    background-color: #57575731;
 }
 
 #artistas-text {
@@ -22,10 +30,9 @@ a {
 .header{
     list-style: none;
     text-align: center;
-    background-color: white; 
     display: grid;
     align-items: center;
-    padding: 20px;
+    padding: 0;
 }
 
 .topArtists{
