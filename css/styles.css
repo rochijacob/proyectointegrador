@@ -181,6 +181,21 @@ nav {
     margin: 10px;
 }
 
+.albums {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px 20px;
+}
+.some-albums {
+  padding: 5px;
+}
+
+.some-albums p {
+  margin: 0 auto;
+  font-size: 11px;
+}
+
 .a-song {
     background-color: #52525241;
     border-radius: 10px;
@@ -202,6 +217,7 @@ nav {
 
 .song-text p {
     font-size: 13px;
+    margin: 0 auto;
 }
 
 .detail-tt-text {
