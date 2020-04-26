@@ -262,6 +262,12 @@ nav {
   color: rgb(214, 214, 214);
 }
 
+footer p {
+  margin: 0 10px;
+  font-size: 13px;
+  text-align: right;
+}
+
 .song{
     display: grid;
     grid-template-columns: 1fr 3fr;
