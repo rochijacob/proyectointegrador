@@ -7,13 +7,21 @@ body {
     text-align: center;
 }
 
+a.logo {
+  position: relative;
+  display: block !important;
+  text-align: left !important;
+  float: left !important;
+  text-align: none;
+  width: 90%;
+}
+
 nav {
     overflow: hidden;
 }
 
 .topnav a {
     float: left;
-    display: block;
     color: #f2f2f2;
     text-align: center;
     padding: 5px;
@@ -25,7 +33,7 @@ nav {
     letter-spacing: 1.8px;
   }
 
-  a.dropdown-item:hover {
+ a.dropdown-item:hover {
     background-color: #31313173;
   }
 
