@@ -1,7 +1,7 @@
 body {
     background-color: #222222;
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 10px;
     padding: 0;
     text-align: center;
@@ -21,6 +21,12 @@ nav {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 1px;
     font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1.8px;
+  }
+
+  a.dropdown-item:hover {
+    background-color: #31313173;
   }
 
   .topnav a:not(:first-child), .dropdown .dropbtn {
@@ -43,13 +49,7 @@ nav {
     display: block;
     text-align: left;
   }
-  .topnav.responsive .dropdown {float: none;}
-  .topnav.responsive .dropdown-content {position: relative;}
-  .topnav.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
+ 
 
 #artistas-text {
     font-size: 20px;
@@ -174,11 +174,28 @@ nav {
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.116);
     border-radius: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .some-songs {
     text-align: left;
-    margin: 10px;
+    margin: 15px 8px;
+    
+}
+
+.albums {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0px 20px;
+}
+.some-albums {
+  padding: 5px;
+}
+
+.some-albums p {
+  margin: 0 auto;
+  font-size: 11px;
 }
 
 .a-song {
@@ -187,12 +204,14 @@ nav {
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.116);
     margin: 10px;
     display: grid;
-    grid-template-columns: 1fr 2.5fr 1fr;
+    grid-template-columns: 0.8fr 2.5fr 0.8fr;
     align-items: center;
 }
 
 .a-song img {
     margin: 5px;
+    padding: 2px;
+    border-radius: 4px;
 }
 
 .song-text {
@@ -200,8 +219,15 @@ nav {
     padding: 0;
 }
 
+.item-1 {
+  margin: 10px;
+  padding: 0;
+  text-align: left;
+}
+
 .song-text p {
     font-size: 13px;
+    padding: 0;
 }
 
 .detail-tt-text {
@@ -220,8 +246,51 @@ nav {
     font-family: 'Open Sans', sans-serif;
     text-align: left;
     font-size: 12px;
+    margin-bottom: 20px;
 }
 
+.socialmedia-detail {
+  margin: 20px;
+  padding: 10px 60px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.socialmedia-detail a {
+  color: white;
+}
+
+.socialmedia-detail a:hover {
+  color: rgb(214, 214, 214);
+}
+
+footer p {
+  margin: 0 10px;
+  font-size: 13px;
+  text-align: right;
+}
+
+button {
+  background-color: #6b6b6b54;
+  border: none;
+  border-radius: 10px;
+  margin: 0 0 30px 0;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.116);
+}
+
+button:hover {
+  background-color: #8a8a8a54;
+}
+
+button p {
+  padding: 5px;
+  margin: 0 auto;
+  font-family: 'Open sans', sans-serif;
+  font-size: 18px;
+  font-weight: 00;
+  letter-spacing: 1.2px;
+  color: white;
+}
 
 
 .song{
