@@ -58,88 +58,6 @@ nav {
     text-align: center;
 }
 
-/*thank u w3schools for the carousel*/
-
-* {box-sizing:border-box}
-
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.prev {
-    left: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-.text {
-  color:white;
-  background-color: rgba(34,34,34,0.5);
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 12px 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
 .topArtists{
     display: grid;
 }
@@ -170,79 +88,27 @@ nav {
 }
 
 .main-detail-containter {
-    background-color: #35353577;
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.116);
+    background-color: #444444;
     border-radius: 10px;
-    margin-top: 10px;
 }
 
-.some-songs {
-    text-align: left;
-    margin: 10px;
-}
-
-.albums {
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 10px 20px;
-}
-.some-albums {
-  padding: 5px;
-}
-
-.some-albums p {
-  margin: 0 auto;
-  font-size: 11px;
-}
-
-.a-song {
-    background-color: #52525241;
-    border-radius: 10px;
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.116);
-    margin: 10px;
+.detail-title {
     display: grid;
-    grid-template-columns: 1fr 2.5fr 1fr;
-    align-items: center;
-}
-
-.a-song img {
-    margin: 5px;
-}
-
-.song-text {
-    margin-left: 13px;
-    padding: 0;
-}
-
-.song-text p {
-    font-size: 13px;
-    margin: 0 auto;
+    grid-template-columns: 2fr 1fr;
 }
 
 .detail-tt-text {
     font-size: 25px;
-    padding: 10px;
-    text-decoration: underline;
 }
 
 .detail-image {
     padding: 10px;
-    float: right;
 }
-
-.artist-information {
-    margin: 0 10px;
-    font-family: 'Open Sans', sans-serif;
-    text-align: left;
-    font-size: 12px;
-}
-
 
 
 .song{
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 5px;
     padding: 10px;
@@ -250,9 +116,6 @@ nav {
     border-radius: 10px;
     justify-content: space-around;
     align-content: center;
-    
-    
-
 }
 
 .image-playlist{
@@ -260,8 +123,6 @@ nav {
    width: 65%;
    height: 82px;
    align-content: left;
-   
-   
    
 }
 .textos-playlist{
@@ -279,5 +140,25 @@ nav {
     border: rgba(0, 0, 0, 0.25);
     height: 50px;
     width: 90%;
+    text-decoration: none;
+    color: #fff;
+}
+.armatuplaylist{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    text-align: center;
+}
+
+.sub-menu ul li{
+    display: none;
+    position: absolute;
+    border-radius: 0px 0px 4px 4px;
+
+}
+
+.sub-menu ul li:hover ul{
+    display: block;
     
+
 }
