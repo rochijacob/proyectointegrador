@@ -7,6 +7,7 @@ body {
     text-align: center;
 }
 
+
 a.logo {
   position: relative;
   display: block !important;
@@ -59,12 +60,7 @@ nav {
   }
  
 
-#artistas-text {
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-style: italic;
-    text-align: center;
-}
+/*CAM*/
 
 /*thank u w3schools for the carousel*/
 
@@ -167,6 +163,15 @@ nav {
     height: 100px;
 }
 
+/*RO*/
+
+#artistas-text {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+
 .theartists {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -195,11 +200,11 @@ nav {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 0px 20px;
+  gap: 5px;
+  padding: 0px 10px;
+  position: relative;
 }
-.some-albums {
-  padding: 5px;
-}
+
 
 .some-albums p {
   margin: 0 auto;
@@ -269,13 +274,7 @@ nav {
 }
 
 .socialmedia-detail a:hover {
-  color: rgb(214, 214, 214);
-}
-
-footer p {
-  margin: 0 10px;
-  font-size: 13px;
-  text-align: right;
+  color: rgb(192, 192, 192);
 }
 
 button {
@@ -300,6 +299,7 @@ button p {
   color: white;
 }
 
+/*LOLO*/
 
 .song{
     display: grid;
@@ -424,3 +424,12 @@ button p {
         opacity: 1;
     }
 }
+
+/*FOOTER */
+
+footer p {
+  margin: 0 10px;
+  font-size: 13px;
+  text-align: right;
+}
+
