@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>.wav detail page</title>
+    <link rel="shortcut icon" href="imagenes/logos/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -13,17 +14,24 @@
 </head>
 <body>
     <nav>
-        <div class="topnav" id="myTopnav">
-            <a>LOGO</a>
-            <a href="index.html" class="dropdown-item">INICIO</a>
-            <a href="#" class="dropdown-item">SOBRE NOSOTROS</a>
-            <a href="artistas.html" class="dropdown-item">ARTISTAS</a>
-            <a href="playlist.html" class="dropdown-item" >PLAYLIST</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="material-icons">menu</i></a>
+        <div class="a-mobile-nav">
+        <a class="hamburgerIcon" onclick="menuOpen()" href="#">
+          <div>
+            <i class="material-icons">menu</i>
           </div>
-        </nav>
+        </a>
+        <ul>
+          <li style="text-align: left;"><a class="icon" href="index.html"><img src="imagenes/logos/blue.png" width="130px"></a></li>
+          <div id="show">
+            <li class="hidden"><a href="index.html">HOME</a></li>
+            <li class="hidden"><a href="artistas.html">ARTISTAS</a></li>
+            <li class="hidden"><a href="playlist.html">PLAYLIST</a></li>
+          </div>
+        </ul>
+        </div>
+      </nav> 
     <main>
-        <div class="main-detail-containter">
+        <div class="main-detail-containter"></div>
             <h1 class="detail-tt-text">The Chainsmokers</h1>
             <div class="detail-image">
                 <img src="imagenes/detail/detailthechain.jpg" width="130px">
@@ -122,13 +130,15 @@
                 <a href="https://www.thechainsmokers.com/" target="_blank"><i class="fab fa-chrome fa-3x"></i></a>
             </div>
         </div>
-        <button onclick="window.history.go(-1)">
-            <p>Volver a Artistas</p>
-        </button>
+        <div class="back-to-artist">
+            <button class="back"  onclick="window.history.go(-1)" >
+                Volver a Artistas
+            </button>
+        </div>
         </div>
     </main>
     <footer>
-        <p>Made with love by .wav</p>
+        <p>Made with <span style="color:#7acfe8;">&#10084;</span> by .wav</p>
     </footer>
 </body>
 </html>
