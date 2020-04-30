@@ -522,5 +522,14 @@ p.hide{
       margin: 25px;
   }
   /*RO*/
+  #artistas-text {
+    padding: 20px 0px;
+  }
+  .theartists {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    padding: 10px;
+    margin: 20px 70px;
+  }
   /*LOLO*/
 }
