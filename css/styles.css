@@ -148,19 +148,44 @@ nav {
     display: grid;
 }
 
-.ton{
+.favart{
     border-radius: 50%;
-    height: 100px;
+    height: 110px;
+    margin-top: 10px;
 }
 
-.chain{
-    border-radius: 50%;
-    height: 100px;
+.artlist {
+  background-color: #52525241;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.116);
+  margin: 7px;
+  display: grid;
+  grid-template-columns: 0.8fr 2.5fr 0.8fr;
+  align-items: center;
 }
 
-.quee{
-    border-radius: 50%;
-    height: 100px;
+.artlist img {
+  margin: 5px;
+  padding: 2px;
+  border-radius: 50%;
+  width: 70px;
+}
+
+.songlists {
+  background-color: #52525241;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.116);
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 0.8fr 2.5fr 0.8fr;
+  align-items: center;
+}
+
+.songlists img {
+  margin: 5px;
+  padding: 2px;
+  border-radius: 4px;
+  width: 70px;
 }
 
 /*RO*/
