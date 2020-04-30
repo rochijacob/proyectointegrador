@@ -15,14 +15,22 @@
 <body>
     <div>
         <nav>
-            <div class="topnav" id="myTopnav">
-                <a class="logo" href="index.html"><img src="imagenes/logos/blue.png" width="30%"></a>
-                <a href="index.html">HOME</a>
-                <a href="artistas.html">ARTISTAS</a>
-                <a href="playlist.html">PLAYLIST</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            <div class="a-mobile-nav">
+            <a class="hamburgerIcon" onclick="menuOpen()" href="#">
+              <div>
+                <i class="material-icons">menu</i>
               </div>
-            </nav>
+            </a>
+            <ul>
+              <li style="text-align: left;"><a class="icon" href="index.html"><img src="imagenes/logos/blue.png" width="130px"></a></li>
+              <div id="show">
+                <li class="hidden"><a href="index.html">HOME</a></li>
+                <li class="hidden"><a href="artistas.html">ARTISTAS</a></li>
+                <li class="hidden"><a href="playlist.html">PLAYLIST</a></li>
+              </div>
+            </ul>
+            </div>
+          </nav>
     </div>
     <h1>.wav</h1>
     <div class="slideshow-container">
@@ -67,7 +75,7 @@
         <span class="dot" onclick="currentSlide(7)"></span>
     </div>
     <p>bienvenidxs al reproductor de música favorito de los centennials...</p>
-    <h3>enjoy ;)</h3>
+    <h3>enjoy &#9786 </h3>
     <h2>TOP ARTISTAS</h2>
     <div class="topArtists">
         <div class="cam1">
@@ -239,6 +247,9 @@
             </div>
         </div>
     </div>
+    <footer>
+        <p>Made with <span style="color:#7acfe8;">&#10084;</span> by .wav</p>
+    </footer>
     <script src="scripts/carousel.js"></script>
 </body>
 </html>
