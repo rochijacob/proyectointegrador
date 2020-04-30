@@ -13,17 +13,10 @@ body {
   text-align: center;
 }
 
-h1 {
-  margin: 10px;
+nav .nav_desktop {
+  display: none;
 }
 
-h2 {
-  margin: 10px;
-}
-
-p {
-  margin: 15px;
-}
 
 li {
   list-style: none;
@@ -66,11 +59,48 @@ ul {
     display: none;
 }
 
+h1 {
+  margin: 10px;
+}
+
+h2 {
+  margin: 10px;
+}
+
+p {
+  margin: 15px;
+}
+
 footer p {
   margin: 0 10px;
   font-size: 13px;
   text-align: right;
   font-style: italic;
+}
+
+.nav_desktop {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 6fr 1fr 1fr 1fr;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.171);
+  padding: 10px 0px;
+}
+
+.icon_desktop {
+  justify-self: start;
+  margin-left: 20px;
+}
+
+a.nav_text {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+a.nav_text:hover {
+  color: #7acfe8;;
+  transition: 0.35s;
 }
 
 /*CAM*/
@@ -315,7 +345,7 @@ footer p {
 }
 
 .socialmedia-detail a:hover {
-  color: rgb(192, 192, 192);
+  color: rgb(136, 136, 136);
 }
 
 .back {
@@ -462,10 +492,93 @@ footer p {
 @media(min-width:768px){
   /*CAM*/
   /*RO*/
+  a.logo { 
+    width: 50%;
+  }
+  #artistas-text {
+    margin: 40px;
+    padding: 0;
+    font-size: 22px;
+  }
+  .theartists {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 7px;
+    padding: 10px;
+  }
+  .main-detail-containter {
+    margin: 15px;
+  }
+  .detail-tt-text {
+    padding-top: 20px;
+    font-size: 30px;
+  }
+  .detail-image img {
+    width: 250px;
+    margin-right: 10px;
+  }
+  .artist-information {
+    font-size: 18px;
+    margin-left: 10px;
+    padding: 25px;
+  }
+  .some-songs {
+    margin-left: 20px;
+    font-size: 22px;
+  }
+  .the-songs {
+    margin: 0px 40px 0px 40px;
+  }
+  .a-song {
+    grid-template-columns: 1fr 4.5fr 1fr;
+    margin: 10px;
+  }
+  .song-text {
+    font-size: 20px;
+  }
+  .song-text p {
+    font-size: 15px;
+  }
+  .albums {
+    gap: 10px;
+    padding: 0 20px;
+  }
+  .some-albums {
+    display: inline-block;
+    position: relative;
+  }
+  .some-albums .album-text {
+    position: absolute;
+    z-index: 666;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 87.5%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.568);
+    padding: 2px;
+  }
+  .some-albums p {
+    font-size: 14px;
+  }
+  .socialmedia-detail {
+    margin: 30px 100px;
+    padding: 10px 80px 20px; 
+  }
+  .back {
+    padding: 10px 20px;
+  }
   /*LOLO*/
 }
 
 @media(min-width:1024px){
+  body {
+    margin: 0;
+  }
+  nav .nav_mobile {
+    display: none;
+  }
+  nav .nav_desktop {
+    display: grid;
  /*CAM*/
   /* .header{
       background-color: white; 
@@ -487,5 +600,6 @@ footer p {
       margin: 25px;
   }
   /*RO*/
+  }
   /*LOLO*/
 }
