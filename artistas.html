@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pagina de Artistas .wav</title>
+    <link rel="shortcut icon" href="imagenes/logos/favicon.png" type="image/png">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="scripts/dropdown_menu.js"></script>
 </head>
 <body>
     <div>
-    <nav>
-    <div class="topnav" id="myTopnav">
-        <a class="logo" href="index.html"><img src="imagenes/logos/blue.png" width="30%"></a>
-        <a href="index.html" class="dropdown-item">INICIO</a>
-        <a href="#" class="dropdown-item">SOBRE NOSOTROS</a>
-        <a href="artistas.html" class="dropdown-item">ARTISTAS</a>
-        <a href="playlist.html"class="dropdown-item">PLAYLIST</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="material-icons">menu</i></a>
-    </div>
-    </nav>
+        <nav>
+            <div class="a-mobile-nav">
+            <a class="hamburgerIcon" onclick="menuOpen()" href="#">
+              <div>
+                <i class="material-icons">menu</i>
+              </div>
+            </a>
+            <ul>
+              <li style="text-align: left;"><a class="icon" href="index.html"><img src="imagenes/logos/blue.png" width="130px"></a></li>
+              <div id="show">
+                <li class="hidden"><a href="index.html">HOME</a></li>
+                <li class="hidden"><a href="artistas.html">ARTISTAS</a></li>
+                <li class="hidden"><a href="playlist.html">PLAYLIST</a></li>
+              </div>
+            </ul>
+            </div>
+          </nav> 
     <div class="top-title">
         <p id="artistas-text">Esta es una seleccion de nuestros mas eschuchados artistas. Con .wav descubri nueva musica y varia un poco tu vida </p>
     </div>

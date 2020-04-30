@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     background-color: #222222;
     color: white;
@@ -7,57 +13,48 @@ body {
     text-align: center;
 }
 
-
-a.logo {
-  position: relative;
-  display: block !important;
-  text-align: left !important;
-  float: left !important;
-  text-align: none;
-  width: 90%;
-}
-
-nav {
-    overflow: hidden;
-}
-
-.topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 5px;
+  li {
+    list-style: none;
+    padding: 8px 0;
+  }
+  
+  a {
     text-decoration: none;
+    color: #f2f2f2;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 1px;
     font-size: 17px;
     font-weight: bold;
-    letter-spacing: 1.8px;
   }
+  
+li a .icon {
+    text-align: start;
+}
 
- a.dropdown-item:hover {
-    background-color: #31313173;
+  ul {
+    display: inline;
+    text-align: center;
   }
-
-  .topnav a:not(:first-child), .dropdown .dropbtn {
+  
+  .hamburgerIcon {
+    position: absolute;
+    right: 4px;
+    top: 22px;
+  }
+  
+  .hamburgerLine {
+    width: 1.5em;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+    border-radius: 3px;
+  }
+  #show {
     display: none;
   }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-
-/* Added with JS */
-  .topnav.responsive {position: relative;}
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+ul li a:hover {
+  background-color: #ff0000;
+}
  
 
 /*CAM*/
@@ -166,10 +163,11 @@ nav {
 /*RO*/
 
 #artistas-text {
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Montserrat', sans-serif;
   font-style: italic;
   text-align: center;
+  padding: 20px;
 }
 
 .theartists {
@@ -236,10 +234,11 @@ nav {
   margin: 10px;
   padding: 0;
   text-align: left;
+  font-size: 14px;
 }
 
 .song-text p {
-    font-size: 13px;
+    font-size: 11px;
     padding: 0;
 }
 
@@ -271,32 +270,26 @@ nav {
 
 .socialmedia-detail a {
   color: white;
+  font-size: 8px;
 }
 
 .socialmedia-detail a:hover {
   color: rgb(192, 192, 192);
 }
 
-button {
+.back {
   background-color: #6b6b6b54;
   border: none;
   border-radius: 10px;
   margin: 0 0 30px 0;
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.116);
-}
-
-button:hover {
-  background-color: #8a8a8a54;
-}
-
-button p {
-  padding: 5px;
-  margin: 0 auto;
+  padding: 5px 10px;
   font-family: 'Open sans', sans-serif;
   font-size: 18px;
   font-weight: 00;
   letter-spacing: 1.2px;
   color: white;
+  cursor: pointer;
 }
 
 /*LOLO*/
