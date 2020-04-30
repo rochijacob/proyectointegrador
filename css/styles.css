@@ -500,6 +500,7 @@ p.hide{
   }
   nav .nav_desktop {
     display: grid;
+  }
  /*CAM*/
   /* .header{
       background-color: white; 
@@ -521,6 +522,5 @@ p.hide{
       margin: 25px;
   }
   /*RO*/
-  }
   /*LOLO*/
 }
