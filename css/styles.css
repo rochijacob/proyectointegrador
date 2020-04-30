@@ -5,55 +5,53 @@
 }
 
 body {
-    background-color: #222222;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    margin: 10px;
-    padding: 0;
-    text-align: center;
+  background-color: #222222;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  margin: 10px;
+  padding: 0;
+  text-align: center;
 }
 
-  li {
-    list-style: none;
-    padding: 8px 0;
-  }
+li {
+  list-style: none;
+  padding: 8px 0;
+}
   
-  a {
-    text-decoration: none;
-    color: #f2f2f2;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 1px;
-    font-size: 17px;
-    font-weight: bold;
-  }
+a {
+  text-decoration: none;
+  color: #f2f2f2;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  font-size: 17px;
+  font-weight: bold;
+}
   
 li a .icon {
-    text-align: start;
+  text-align: start;
 }
 
-  ul {
-    display: inline;
-    text-align: center;
-  }
+ul {
+  display: inline;
+  text-align: center;
+}
   
-  .hamburgerIcon {
-    position: absolute;
-    right: 4px;
-    top: 22px;
-  }
+.hamburgerIcon {
+  position: absolute;
+  right: 4px;
+  top: 22px;
+}
   
-  .hamburgerLine {
-    width: 1.5em;
-    height: 3px;
-    margin: 5px 0;
-    background-color: white;
-    border-radius: 3px;
-  }
-  #show {
+.hamburgerLine {
+  width: 1.5em;
+  height: 3px;
+  margin: 5px 0;
+  background-color: white;
+  border-radius: 3px;
+}
+
+#show {
     display: none;
-  }
-ul li a:hover {
-  background-color: #ff0000;
 }
  
 
