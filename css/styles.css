@@ -61,6 +61,18 @@ ul li a:hover {
 
 /*thank u w3schools for the carousel*/
 
+h1 {
+  margin: 10px;
+}
+
+h2 {
+  margin: 10px;
+}
+
+p {
+  margin: 15px;
+}
+
 * {box-sizing:border-box}
 
 .slideshow-container {
@@ -141,14 +153,14 @@ ul li a:hover {
   to {opacity: 1}
 }
 
-.topArtists{
+.topArtists {
     display: grid;
 }
 
-.favart{
-    border-radius: 50%;
-    height: 110px;
-    margin-top: 10px;
+.favart {
+  border-radius: 50%;
+  height: 110px;
+  margin: 10px;
 }
 
 .artlist {
