@@ -13,25 +13,37 @@
     <script src="scripts/dropdown_menu.js"></script>
 </head>
 <body>
-        <nav>
-            <div class="topnav" id="myTopnav">
-                <a>LOGO</a>
-                <a href="index.html">INICIO</a>
-                <a href="artistas.html">ARTISTAS</a>
-                <a href="playlist.html">PLAYLIST</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-              </div>
-            </nav>
+    <nav>
+        <div class="nav_mobile">
+        <a class="hamburgerIcon" onclick="menuOpen()" href="#">
+          <div>
+            <i class="material-icons">menu</i>
+          </div>
+        </a>
+        <ul>
+          <li style="text-align: left;"><a class="icon" href="index.html"><img src="imagenes/logos/blue.png" width="130px"></a></li>
+          <div id="show">
+            <li class="hidden"><a href="index.html">HOME</a></li>
+            <li class="hidden"><a href="artistas.html">ARTISTAS</a></li>
+            <li class="hidden"><a href="playlist.html">PLAYLIST</a></li>
+          </div>
+        </ul>
+        </div>
+      </nav> 
+      <nav>
+        <div class="nav_desktop">
+            <a class="icon_desktop" href="index.html"><img src="imagenes/logos/blue.png" width="130px"></a>
+            <a  class="nav_text"  href="index.html">Home</a>
+            <a class="nav_text"  href="artistas.html">Artistas</a>
+            <a class="nav_text" href="playlist.html">Playlist</a>
+        </div>
+      </nav>
         <h1>Playlist</h1>
         <h4 class="armatuplaylist">Arma tu Playlist!</h4>
-        
 
+        <p class="hide">hidden content</p>
 
-
-            <p class="hide">hidden content</p>
-
-        <div class="main-detail-containter">
-            <p class="hide">Hidden Content</p>
+    <div class="main-detail-containter">
         <div class="the-songs">
             <div class="a-song playlist">
                 <img src="imagenes/jcolealbum.jpg" width="100%" alt="j cole album">
@@ -57,14 +69,17 @@
                     <h4 class="item-1">Closer</h4>
                     <p class="item-1">The Chainsmokers ft Halsey - Single</p>
                 </div>
-                <div class="dropdown">
-                    <i class="material-icons">more_horiz</i>
-                    
-                    <div class="dropdown-content">
-                      <a class= "verartista" href=detail.html> Ver artista</a> 
-                      </ul>
-                    </div>
-                  </div>
+                <nav>
+                    <ul>
+                      <li class="sub-menu-parent" tab-index="0">
+                        <i class="material-icons">more_horiz</i>
+                        <ul class="sub-menu">
+                          <li class="verartista"><a href="detail.html">Ver Artista</a></li>
+                        </ul>
+                      </li>
+                      <li class="sub-menu-parent" tab-index="0">
+                    </ul>      
+                </nav>    
             </div>
 
 
@@ -76,6 +91,7 @@
                 </div>
                 <i class="material-icons">more_horiz</i>
             </div>
+
             <div class="a-song">
                 <img src="imagenes/relsbalbum.jpg" width="100%" alt="rels b album">
                 <div class="song-text">
@@ -84,6 +100,7 @@
                 </div>
                 <i class="material-icons">more_horiz</i>
             </div>
+
             <div class="a-song">
                 <img src="imagenes/tiestoalbum.jpg" width="100%" alt="tiesto album">
                 <div class="song-text">
@@ -92,6 +109,7 @@
                 </div>
                 <i class="material-icons">more_horiz</i>
             </div>
+
             <div class="a-song">
             <img src="imagenes/luvalbum.jpg" width="100%" alt="luv album">
             <div class="song-text">
@@ -101,35 +119,9 @@
             <i class="material-icons">more_horiz</i>
             </div>
             <p class="hide">hidden content</p>
-            
-            
-
-</div>
-
-
-
         </div>
-    </div>
-           
+    </div>    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-    
 
     <script src="scripts/playlist.js"></script>
 </body>

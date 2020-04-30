@@ -13,23 +13,46 @@
 </head>
 <body>
     <nav>
-        <div class="topnav" id="myTopnav">
-            <a>LOGO</a>
-            <a href="index.html" class="dropdown-item">INICIO</a>
-            <a href="#" class="dropdown-item">SOBRE NOSOTROS</a>
-            <a href="artistas.html" class="dropdown-item">ARTISTAS</a>
-            <a href="playlist.html" class="dropdown-item" >PLAYLIST</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="material-icons">menu</i></a>
+        <div class="nav_mobile">
+        <a class="hamburgerIcon" onclick="menuOpen()" href="#">
+          <div>
+            <i class="material-icons">menu</i>
           </div>
-        </nav>
+        </a>
+        <ul>
+          <li style="text-align: left;"><a class="icon" href="index.html"><img src="imagenes/logos/blue.png" width="130px"></a></li>
+          <div id="show">
+            <li class="hidden"><a href="index.html">HOME</a></li>
+            <li class="hidden"><a href="artistas.html">ARTISTAS</a></li>
+            <li class="hidden"><a href="playlist.html">PLAYLIST</a></li>
+          </div>
+        </ul>
+        </div>
+      </nav> 
+      <nav>
+        <div class="nav_desktop">
+            <a class="icon_desktop" href="index.html"><img src="imagenes/logos/blue.png" width="130px"></a>
+            <a  class="nav_text"  href="index.html">Home</a>
+            <a class="nav_text"  href="artistas.html">Artistas</a>
+            <a class="nav_text" href="playlist.html">Playlist</a>
+        </div>
+      </nav>
     <main>
         <div class="main-detail-containter">
+            <div class="mobile-title">
             <h1 class="detail-tt-text">J Cole</h1>
             <div class="detail-image">
                 <img src="imagenes/J COLE.jpg" width="130px">
             </div>
+        </div>
+            <div class="detail-image-desktop">
+                <img src="imagenes/detail/jcolehorizontal.jpg" width="100%" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                <div class="desktop_detail_title">
+                    <p>J Cole</p>
+                </div>
+            </div>
             <div class="detail-title artist-information">
-                <p>Jermaine Lamarr Cole (nacido el 28 de enero de 1985), más conocido por su nombre artístico J. Cole, es un cantante y productor de hip hop estadounidense. Criado en Fayetteville, Carolina del Norte, Cole inicialmente ganó reconocimiento como rapero tras el lanzamiento de su primer mixtape, The Come Up, a principios de 2007. Con la intención de seguir una carrera en solitario como rapero, lanzó dos mixtapes adicionales después firmando para la marca Roc Nation de Jay Z en 2009.</p>
+                <p>Jermaine Lamarr Cole (nacido el 28 de enero de 1985), más conocido por su nombre artístico J. Cole, es un cantante y productor de hip hop estadounidense. Criado en Fayetteville, Carolina del Norte, Cole inicialmente ganó reconocimiento como rapero tras el lanzamiento de su primer mixtape, The Come Up, a principios de 2007. </p>
             </div>
             <h3 class="some-songs">Algunas canciones del Artista:</h3>
             <div class="the-songs">
@@ -89,6 +112,14 @@
                     </div>
                     <i class="material-icons">more_horiz</i>
                 </div>
+                <div class="a-song">
+                    <img src="imagenes/detail/foryoureyezonly.jpg" width="100%" alt="4 your eyez only album cover">
+                    <div class="song-text">
+                        <h4 class="item-1">Foldin Clothes</h4>
+                        <p class="item-1">4 Your Eyez Only</p>
+                    </div>
+                    <i class="material-icons">more_horiz</i>
+                </div>
         </div>
             <h3 class="some-songs">Ultimos Albumes:</h3>
         <div class="albums">
@@ -110,9 +141,12 @@
                     <p>4 Your Eyez Only- 2016</p>
                 </div>
             </div>
+            
         </div>
+        
         <div>
             <div>
+                <p class="hide">hidden content</p>
                 <h3 class="some-songs">Redes Sociales:</h3>
             </div>
             <div class="socialmedia-detail" style="font-size: 0.5rem;">
