@@ -7,7 +7,7 @@
 body {
   background-color: #222222;
   color: white;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 10px;
   padding: 0;
   text-align: center;
@@ -43,7 +43,7 @@ ul {
   
 .hamburgerIcon {
   position: absolute;
-  right: 4px;
+  right: 10px;
   top: 22px;
 }
   
@@ -324,9 +324,13 @@ a.nav_text:hover {
     float: right;
 }
 
+.detail-image-desktop {
+  display: none;
+}
+
 .artist-information {
     margin: 0 10px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: left;
     font-size: 12px;
     margin-bottom: 20px;
@@ -345,7 +349,7 @@ a.nav_text:hover {
 }
 
 .socialmedia-detail a:hover {
-  color: rgb(136, 136, 136);
+  color: rgb(175, 175, 175);
 }
 
 .back {
@@ -355,7 +359,7 @@ a.nav_text:hover {
   margin: 0 0 30px 0;
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.116);
   padding: 5px 10px;
-  font-family: 'Open sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 00;
   letter-spacing: 1.2px;
@@ -473,7 +477,7 @@ p.hide{
     margin: auto;
     left: 0;
     right: 0;
-    top: 87.5%;
+    top: 90%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.568);
     padding: 2px;
@@ -530,6 +534,71 @@ p.hide{
     column-gap: 10px;
     padding: 10px;
     margin: 20px 70px;
+  }
+  .main-detail-containter {
+    margin: 30px 180px;
+  }
+  .mobile-title {
+    display: none;
+  }
+  .detail-image-desktop {
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: inline-block;
+    position: relative;
+  }
+  .detail-image-desktop .desktop_detail_title {
+    position: absolute;
+    z-index: 666;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+    padding: 2px;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+  }
+  .artist-information {
+    font-size: 18px;
+    margin: 0 50px;
+    padding: 35px;
+    text-align: center;
+    line-height: 25px;
+  }
+  .the-songs {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .a-song {
+    grid-template-columns: 1fr 4.5fr 1fr;
+    margin: 0 20px;
+  }
+  .some-songs {
+    margin: 30px 20px;
+  }
+  .albums {
+    margin: 0 40px;
+    gap: 35px
+  }
+  .some-albums .album-text {
+    top: 92%;
+  }
+  .some-albums p {
+    font-size: 18px;
+  }
+  .socialmedia-detail {
+    margin: 30px 300px;
+    padding: 30px 80px 40px; 
+  }
+  .back {
+    padding: 20px 30px;
+    font-size: 20px;
   }
   /*LOLO*/
 }
