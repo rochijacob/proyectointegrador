@@ -465,11 +465,6 @@ p.hide{
   transition-delay: 0s, 0s, 0.3s; 
 }
 
-body { 
-  padding: 2%; 
-  font: 10px/1.1 "Montserrat"; 
-}
-
 nav a { 
   color: white; 
   display: block; 
