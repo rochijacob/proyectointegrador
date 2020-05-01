@@ -9,7 +9,7 @@ body {
   color: white;
   font-family: 'Montserrat', sans-serif;
   margin: 10px;
-  padding: 0;
+  padding: none;
   text-align: center;
 }
 
@@ -84,7 +84,7 @@ footer p {
   grid-template-columns: 6fr 1fr 1fr 1fr;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.171);
-  padding: 10px 0px;
+  padding: 6px 0px;
 }
 
 .icon_desktop {
@@ -426,10 +426,7 @@ p.hide{
 }
 
 /* presentational */
-body { 
-  padding: 2%; 
-  font: 10px/1.1 "Montserrat"; 
-}
+
 
 nav a { 
   color: white; 
@@ -448,10 +445,13 @@ nav ul li {
   
 }
 
+/*
 nav > ul { 
   background: 
 
 }
+*/
+
 nav > ul > li { 
   display: inline-block; 
   border-left: solid 1px #aaa; 
