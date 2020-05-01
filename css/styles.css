@@ -773,6 +773,13 @@ iframe{
   .main-detail-containter .the-songs{
     width: 100%;
   }
+  .playlist-song {
+    grid-template-columns: 1fr;
+    font-size: 22px;
+  }
+  .a-playlist {
+    margin: 0 200px;
+  }
 }
 
 
