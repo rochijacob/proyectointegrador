@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Document</title>
+    <title>Playlist .wav</title>
     <script src="scripts/dropdown_menu.js"></script>
 </head>
 <body>
@@ -32,6 +32,25 @@
     </nav>
     <nav>
        <div class="nav_desktop">
+  <nav>
+      <div class="nav_mobile">
+      <a class="hamburgerIcon" onclick="menuOpen()" href="#">
+        <div>
+          <i class="material-icons">menu</i>
+        </div>
+      </a>
+      <ul>
+        <li style="text-align: left;"><a class="icon" href="index.html"><img src="imagenes/logos/blue.png" width="130px"></a></li>
+        <div id="show">
+          <li class="hidden"><a href="index.html">HOME</a></li>
+          <li class="hidden"><a href="artistas.html">ARTISTAS</a></li>
+          <li class="hidden"><a href="playlist.html">PLAYLIST</a></li>
+        </div>
+      </ul>
+      </div>
+  </nav> 
+    <nav>
+      <div class="nav_desktop">
           <a class="icon_desktop" href="index.html"><img src="imagenes/logos/blue.png" width="130px"></a>
           <a  class="nav_text"  href="index.html">Home</a>
           <a class="nav_text"  href="artistas.html">Artistas</a>
@@ -50,6 +69,67 @@
                 <p class="item-1">J Cole - 2014 Forest Hills Drive</p>
              </div>
              <div class="dropdown">
+      </div>
+    </nav>
+      <h1 class=playlist>Tu Playlist</h1>
+      <h4 class="armatuplaylist">Diseñala con tus canciones favoritas!</h4>
+      <p class="hide">hidden content</p>
+
+  <div class="main-detail-containter">
+        <div class="the-songs">
+            <div class="a-song playlist">
+                <img src="imagenes/jcolealbum.jpg" width="100%" alt="j cole album">
+                <div class="song-text">
+                    <h4 class="item-1">No Role Modelz</h4>
+                    <p class="item-1">J Cole - 2014 Forest Hills Drive</p>
+                </div>
+                <div class="dropdown">
+                    <i class="material-icons">more_horiz</i>
+                    
+                    <div class="dropdown-content">
+                      <a class= "verartista" href=detailjcole.html> Ver artista</a> 
+                      </ul>
+                    </div>
+                  </div>
+                
+            </div>        
+                
+               
+            <div class="a-song">
+                <img src="imagenes/chainsmokeralbum.jpg" width="100%" alt="chainsmokers album">
+                <div class="song-text">
+                    <h4 class="item-1">Closer</h4>
+                    <p class="item-1">The Chainsmokers ft Halsey - Single</p>
+                </div>
+                <nav>
+                    <ul>
+                      <li class="sub-menu-parent" tab-index="0">
+                        <i class="material-icons">more_horiz</i>
+                        <ul class="sub-menu">
+                          <li class="verartista"><a href="detail.html">Ver Artista</a></li>
+                        </ul>
+                      </li>
+                      <li class="sub-menu-parent" tab-index="0">
+                    </ul>      
+                </nav>    
+            </div>
+
+
+            <div class="a-song">
+                <img src="imagenes/marylinmansonalbum.jpg" width="100%" alt="marylin manson album">
+                <div class="song-text">
+                    <h4 class="item-1">Sweet Dreams</h4>
+                    <p class="item-1">Marylin Manson - Smells Like Children</p>
+                </div>
+                <i class="material-icons">more_horiz</i>
+            </div>
+
+            <div class="a-song">
+                <img src="imagenes/relsbalbum.jpg" width="100%" alt="rels b album">
+                <div class="song-text">
+                    <h4 class="item-1">OTRO CHEKE</h4>
+                    <p class="item-1">Rels B ft Duki - Happy Birthday Flakko</p>
+                </div>
                 <i class="material-icons">more_horiz</i>
                 <div class="dropdown-content">
                    <a class= "verartista" href=detailjcole.html> Ver artista</a> 
@@ -127,5 +207,9 @@
        </div>
     </div>
     <script src="scripts/playlist.js"></script>
- </body>
- </html>
+ 
+    <footer>
+      <p>Made with <span style="color:#7acfe8;">&#10084;</span> by .wav</p>
+  </footer>
+</body>
+</html>

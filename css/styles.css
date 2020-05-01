@@ -9,7 +9,7 @@ body {
   color: white;
   font-family: 'Montserrat', sans-serif;
   margin: 10px;
-  padding: 0;
+  padding: none;
   text-align: center;
 }
 
@@ -72,7 +72,7 @@ p {
 }
 
 footer p {
-  margin: 0 10px;
+  margin: 5px 10px;
   font-size: 13px;
   text-align: right;
   font-style: italic;
@@ -84,7 +84,7 @@ footer p {
   grid-template-columns: 6fr 1fr 1fr 1fr;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.171);
-  padding: 10px 0px;
+  padding: 6px 0px;
 }
 
 .icon_desktop {
@@ -439,7 +439,7 @@ nav a {
 nav a:hover { 
   color: rgb(114, 188, 223); 
 }
-nav ul,
+
 nav ul li { 
   list-style-type: none; 
   padding: 0; 
@@ -447,10 +447,6 @@ nav ul li {
   
 }
 
-nav > ul { 
-  
-
-}
 
 nav > ul > li { 
   display: inline-block; 
@@ -688,4 +684,8 @@ nav > ul > li:first-child {
   .main-detail-containter .the-songs{
     width: 100%;
   }
+
+
+
+
 
