@@ -139,7 +139,7 @@ a.nav_text:hover {
 * {box-sizing:border-box}
 
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 1200px;
   position: relative;
   margin: auto;
 }
@@ -176,7 +176,9 @@ a.nav_text:hover {
 .text {
   color:white;
   background-color: rgba(34,34,34,0.5);
-  font-size: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
@@ -547,6 +549,9 @@ nav > ul > li:first-child {
 
 @media(min-width:768px){
   /*CAM*/
+  .text{
+    font font-size: 18px;
+  }
   .favart {
     border-radius: 50%;
     height: 75px;
@@ -859,7 +864,3 @@ nav > ul > li:first-child {
     margin: 0 200px;
   }
 }
-
-
-
-
