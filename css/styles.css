@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -102,18 +102,15 @@ footer p {
   grid-template-columns: 6fr 1fr 1fr 1fr;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.171);
-  padding: 6px 0px;
 }
 
 .icon_desktop {
   justify-self: start;
-  margin-left: 20px;
 }
 
 a.nav_text {
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
-  padding: 10px;
 }
 
 a.nav_text:hover {
@@ -130,16 +127,12 @@ a.nav_text:hover {
   color: #7acfe8;
 }
 
-.topAlbums h2{
-  color: #7acfe8;
-}
-
 /*thank u w3schools for the carousel*/
 
 * {box-sizing:border-box}
 
 .slideshow-container {
-  max-width: 1200px;
+  max-width: 1000px;
   position: relative;
   margin: auto;
 }
@@ -176,9 +169,7 @@ a.nav_text:hover {
 .text {
   color:white;
   background-color: rgba(34,34,34,0.5);
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 2px;
+  font-size: 15px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
@@ -262,30 +253,11 @@ a.nav_text:hover {
   width: 70px;
 }
 
-.albums-display{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.alblist img{
-  margin: 5px;
-  padding: 2px;
-  border-radius: 4px;
-  width: 100px;
-}
-
 .item-2 {
   margin: 10px;
   padding: 0;
   text-align: left;
   font-size: 14px;
-}
-
-.item-3 {
-  margin: 10px;
-  padding: 0;
-  text-align: center;
-  font-size: 14px !important;
 }
 
 /*RO*/
@@ -537,21 +509,8 @@ nav > ul > li:first-child {
         opacity: 1;
     }
 }
-
-/*MEDIA QUERIES*/
-
-/* @media(max-width:768px){
-  .albums-display{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-} */
-
 @media(min-width:768px){
   /*CAM*/
-  .text{
-    font font-size: 18px;
-  }
   .favart {
     border-radius: 50%;
     height: 75px;
@@ -559,65 +518,37 @@ nav > ul > li:first-child {
   }
   .topArtists{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr !important;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     margin: 15px;
-  } 
-  .artlist img {
-    margin: 5px;
-    padding: 2px;
-    border-radius: 50%;
-    width: 50px;
-  }
-  .topTracks{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr !important;
-    gap: 10px;
-    margin: 15px;
-  }
-  .songlists img {
-    margin: 5px;
-    padding: 2px;
-    border-radius: 4px;
-    width: 50px;
-  }
-
-  .topAlbums{
+} 
+.artlist img {
+  margin: 5px;
+  padding: 2px;
+  border-radius: 50%;
+  width: 50px;
+}
+.topTracks{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     margin: 15px;
-  }
-
-  .albums-display{
-    display: grid;
-    grid-template-columns: none;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 10px;
-    margin: 15px;
-  }
-
-  .alblist img{
-    margin: 5px;
-    padding: 2px;
-    border-radius: 4px;
-    width: 190px;
-  }
-  .item-2 {
-    margin: 10px;
-    padding: 0;
-    text-align: left;
-    font-size: 12px !important;
-  }
-  .item-3 {
-    margin: 10px;
-    padding: 0;
-    text-align: center;
-    font-size: 12px !important;
-  }
-  iframe{
-    height: 165px;
-  }
+}
+.songlists img {
+  margin: 5px;
+  padding: 2px;
+  border-radius: 4px;
+  width: 50px;
+}
+.item-2 {
+  margin: 10px;
+  padding: 0;
+  text-align: left;
+  font-size: 12px !important;
+}
+iframe{
+  height: 165px;
+}
   /*RO*/
   a.logo { 
     width: 50%;
@@ -699,6 +630,7 @@ nav > ul > li:first-child {
   .playlist{
     font-size: 30px;
     text-decoration: none;
+
   }
   .armatuplaylist{
     font-size: 20px;
@@ -722,16 +654,16 @@ nav > ul > li:first-child {
   margin: 10px;
   }
   .topArtists{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    margin: 25px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      margin: 25px;
   } 
   .topTracks{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    margin: 25px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      margin: 25px;
   }
   .artlist img {
     margin: 5px;
@@ -744,29 +676,11 @@ nav > ul > li:first-child {
     padding: 2px;
     border-radius: 4px;
     width: 95px;
-    }
-  .topAlbums{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    margin: 15px;
-  }
-  .alblist img{
-    margin: 5px;
-    padding: 2px;
-    border-radius: 4px;
-    width: 350px;
   }
   .item-2 {
     margin: 10px;
     padding: 0;
     text-align: left;
-    font-size: 17px !important;
-  }
-  .item-3 {
-    margin: 10px;
-    padding: 0;
-    text-align: center;
     font-size: 17px !important;
   }
   /*RO*/
@@ -864,3 +778,15 @@ nav > ul > li:first-child {
     margin: 0 200px;
   }
 }
+@media(min-width:1624px) {
+  .nav_desktop {
+    padding: 0px;
+  }
+  .slideshow-container {
+    max-width: 90%;
+    margin-top: 5px;
+  }
+}
+
+
+
