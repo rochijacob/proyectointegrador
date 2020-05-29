@@ -1,0 +1,38 @@
+-Etiquetas semanticas
+
+-Cumpliendo las consignas = 7
+-Consignas + extras = 10
+
+-header / section / footer
+
+- Agregar buscador
+
+-En el home, tiene que haber 3 charts (album, artists, tracks) 
+
+-FOOTER con nombre de los integrantes, logo de deezer y redes sociales
+
+-De charts --> detalle
+
+- Pagina de generos
+
+- Generos --> detalle
+
+-PAGINA DETALLE (ARTISTA)
+Imagen artista + nombre + fans + Top 5 canciones
+
+-PAGINA DETALLE (ALBUM)
+-Imagen + nombre + nombre artista (a detalle artista) + fecha de salida
+
+-DETALLE TRACK
+nombre track + imagen + nombre artista + duracion + nombre album + agregar a playlist
+
+-DETALLE GENERO
+nombre genero + 10 artistas que pertenescan al genero
+
+
+-PLAYLIST
+Debe haber una sesion de usuario?
+boton agregar/ sacar de la playlist
+
+RESULTADOS BUSQUEDA
+si tarda = spinner
