@@ -36,3 +36,16 @@ boton agregar/ sacar de la playlist
 
 RESULTADOS BUSQUEDA
 si tarda = spinner
+
+
+----------------------------------------------------------------------------------------------------------
+Cualquier consulta a la API (propiedad type --> le dice este objeto es de tipo artista) le paso por query string los detalles (type + id) detalle.html?/type/artist/id/4
+ 4 funciones, una para cada cosa a imprimir (1) renderiza un artista funcion crear artista imprime todos los divs y etiquetas del detalle de artista, 2) crear album 3) genero 4) track) --> mirar pagina switch (hay 4 switchs) --> el fectch se dispara solo cuando se ejecuta la funcion, en el query string me tiene que aparecer el type y el id
+ 
+position absolute al search + un div abajo (¿como controlo ese div?)---> manejar con algun evento que clickee
+
+cajita x encima --> :hoover display block, position/transition para que no se me encime, adentro de ese dropdow tiene que imprimirse cada hipervinculo
+
+
+
+
