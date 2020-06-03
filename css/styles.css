@@ -107,7 +107,6 @@ footer p {
 
 .icon_desktop {
   justify-self: start;
-  margin-left: 20px;
 }
 
 a.nav_text {
@@ -288,6 +287,8 @@ a.nav_text:hover {
   font-size: 14px !important;
 }
 
+
+
 /*RO*/
 
 #artistas-text {
@@ -312,8 +313,9 @@ a.nav_text:hover {
     column-gap: 5px;
 }
 
-.cuadrardito {
-    padding: 5px;
+.cuadradito {
+  position: relative;
+  background-color: red;
 }
 
 .main-detail-containter {
@@ -381,7 +383,8 @@ a.nav_text:hover {
 .detail-tt-text {
     font-size: 25px;
     padding: 10px;
-    text-decoration: underline;
+    letter-spacing: 1.8px;
+    word-spacing: 10px;
 }
 
 .detail-image {
@@ -550,7 +553,7 @@ nav > ul > li:first-child {
 @media(min-width:768px){
   /*CAM*/
   .text{
-    font font-size: 18px;
+    font-size: 18px;
   }
   .favart {
     border-radius: 50%;
@@ -769,6 +772,8 @@ nav > ul > li:first-child {
     text-align: center;
     font-size: 17px !important;
   }
+
+
   /*RO*/
   #artistas-text {
     padding: 20px 0px;
@@ -782,35 +787,8 @@ nav > ul > li:first-child {
   .main-detail-containter {
     margin: 30px 180px;
   }
-  .mobile-title {
-    display: none;
-  }
-  .detail-image-desktop {
-    display: block;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    display: inline-block;
-    position: relative;
-  }
-  .detail-image-desktop .desktop_detail_title {
-    position: absolute;
-    z-index: 666;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    text-align: center;
-    padding: 2px;
-    font-size: 35px;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 1.5px;
-    font-weight: bold;
-  }
   .artist-information {
     font-size: 18px;
-    margin: 0 50px;
-    padding: 35px;
-    text-align: center;
     line-height: 25px;
   }
   .the-songs {
@@ -824,7 +802,7 @@ nav > ul > li:first-child {
     margin: 0 20px;
   }
   .some-songs {
-    margin: 30px 20px;
+    margin: 40px 20px;
   }
   .albums {
     margin: 0 40px;
@@ -863,4 +841,10 @@ nav > ul > li:first-child {
   .a-playlist {
     margin: 0 200px;
   }
+}
+@media(min-width:1600px){
+  .icon-desktop {
+    margin-left: 20px;
+  }
+  
 }
