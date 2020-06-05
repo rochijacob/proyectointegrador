@@ -814,7 +814,7 @@ nav > ul > li:first-child {
     font-size: 18px;
   }
   .socialmedia-detail {
-    margin: 30px 300px;
+    margin: 30px 220px;
     padding: 30px 80px 40px; 
   }
   .back {
@@ -845,5 +845,10 @@ nav > ul > li:first-child {
   .icon-desktop {
     margin-left: 20px;
   }
-  
+  .main-detail-containter{
+    margin: 30px 300px;
+  }
+  .socialmedia-detail {
+    margin: 30px 300px;
+  }
 }
