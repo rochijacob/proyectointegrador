@@ -1,10 +1,10 @@
 let queryString =  location.search; 
 console.log(queryString);
 
-let searchParams = new URLSearchParams(queryString);
-console.log(searchParams);
+let queryStringObj = new URLSearchParams(queryString);
+console.log(queryStringObj);
 
-let search = searchParams.get('search');
+let search = queryStringObj.get('search');
 console.log(search);
 
 
@@ -18,9 +18,12 @@ fetch(url)
         return response.json();
     })
     .then(function(datos){
+        console.log(datos);
+        
         let lista = document.querySelector('.lista')
         let resultados = datos.data;
-
+        console.log(resultados);
+        
         resultados.forEach(resultado => {
             lista.innerHTML += '<li>' + resultado.name + '</li>'
         });
