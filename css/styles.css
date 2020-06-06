@@ -549,6 +549,33 @@ nav > ul > li:first-child {
   }
 } */
 
+/*SEARCH*/
+
+.search-box {
+    border-radius: 50px;
+    padding: 10px 50px;
+    background-color: white;
+    border-width: 0;
+    border-color: transparent;
+    cursor: pointer;
+    border-style: none;
+}
+
+.search-button {
+  border-radius: 50px;
+    padding: 8px 10px;
+    background-color: #7acfe8;
+    border-width: 0;
+    border-color: transparent;
+    cursor: pointer;
+    border-style: none;
+    font-family: Montserrat;
+    font-weight: bold;
+    color: white;
+    font-size: 13px;
+    margin: 10px;
+}
+
 @media(min-width:768px){
   /*CAM*/
   .text{
