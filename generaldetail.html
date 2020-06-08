@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <title>.Wav Search</title>
+    <title>Chainsmokers .wav</title>
     <link rel="shortcut icon" href="imagenes/logos/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -31,8 +31,8 @@
           </div>
         </ul>
         </div>
-      </nav> 
-      <nav>
+    </nav> 
+    <nav>
         <div class="nav_desktop">
             <a class="icon_desktop" href="index.html"><img src="imagenes/logos/blue.png" width="130px"></a>
             <a  class="nav_text"  href="index.html">Home</a>
@@ -41,21 +41,22 @@
             <a class="nav_text" href="playlist.html">Playlist</a>
             <a class="nav_text search-desktop" href="search.html"><span class="material-icons">search</span></a>
         </div>
-      </nav>
-      <main>
-        <br>
-        <form action="search.html" method="GET">
-          <input type="text" name="search" placeholder="Escriba aqui..." class="search-box">
-          <button type="submit" class="search-button">SEARCH</button>
-          <h1>Resultados de Busqueda...</h1>
-      </form>
-      <div class="main-detail-containter">
-            <ul class="lista">
+    </nav>
+    <main>
+        <div class="main-detail-containter">
+        <div class="image-detalle"></div>
+        <h2 class="titulo-detalle"></h2>
+        <h3 class="interprete">Artista: </h3>
+        <h3 class="album-detalle">Album: </h3>
+        <iframe scrolling="no" frameborder="0" allowTransparency="true" src="" width="600" height="350"></iframe>
 
-            </ul>
-            <p>Searching.....</p>
-          </div>
-      </main>
-      <script src="scripts/results.js"></script>
+        <p><a href="#" class="agregar">Agregar a playlist</a></p>
+
+        <p><a href="index.html" class="tops">Volver a Home</a></p>
+
+        <p><a href="playlist.html">Ver Playlist</a></p>
+        </div>
+    </main>
+    <script src="scripts/detail.js"></script>
 </body>
 </html>

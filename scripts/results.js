@@ -25,7 +25,7 @@ fetch(urltracks)
         console.log(resultados);
         
         resultados.forEach(resultado => {
-            lista.innerHTML += '<li><a href= "detalle.html' + resultado.id + '">' + resultado.title + '</a></li>'
+            lista.innerHTML += '<li><a href= "generaldetail.html?id=' + resultado.id + '">' + resultado.title + '</a></li>'
         });
     })
     .catch(function(error){

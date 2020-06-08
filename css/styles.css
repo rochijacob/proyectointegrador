@@ -109,6 +109,11 @@ footer p {
   justify-self: start;
 }
 
+.search-desktop {
+  padding-right: 20px !important;
+  padding-left: 20px !important;
+}
+
 a.nav_text {
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
@@ -118,6 +123,35 @@ a.nav_text {
 a.nav_text:hover {
   color: #7acfe8;
   transition: 0.35s;
+}
+
+nav a { 
+  color: white; 
+  display: block; 
+  padding: 8px 3px; 
+  text-decoration: none; }
+
+nav a:hover { 
+  color: rgb(114, 188, 223); 
+}
+
+nav ul li { 
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
+  
+}
+
+
+nav > ul > li { 
+  display: inline-block; 
+  border-left: solid 1px #aaa; 
+  font-size: 10px;
+
+}
+
+nav > ul > li:first-child { 
+  border-left: none; 
 }
 
 /*CAM*/
@@ -434,6 +468,20 @@ a.nav_text:hover {
   cursor: pointer;
 }
 
+.titulo-detalle {
+  padding: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+
+.interprete {
+  padding: 10px;
+}
+
+.album-detalle {
+  padding: 10px;
+}
+
 /*LOLO*/
 p.hide{
   visibility: hidden;
@@ -492,34 +540,6 @@ p.hide{
   transition-delay: 0s, 0s, 0.3s; 
 }
 
-nav a { 
-  color: white; 
-  display: block; 
-  padding: 0.5em 1em; 
-  text-decoration: none; }
-
-nav a:hover { 
-  color: rgb(114, 188, 223); 
-}
-
-nav ul li { 
-  list-style-type: none; 
-  padding: 0; 
-  margin: 0; 
-  
-}
-
-
-nav > ul > li { 
-  display: inline-block; 
-  border-left: solid 1px #aaa; 
-  font-size: 10px;
-
-}
-
-nav > ul > li:first-child { 
-  border-left: none; 
-}
 
 .sub-menu {
   position: absolute;
