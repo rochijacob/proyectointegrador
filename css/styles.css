@@ -889,6 +889,9 @@ p.hide{
   }
 }
 @media(min-width:1600px){
+  nav a {
+    padding: 8px 12px;
+  }
   .icon-desktop {
     margin-left: 20px;
   }

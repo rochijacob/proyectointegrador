@@ -13,7 +13,8 @@ console.log(urltracks);
 let urlartists = proxy + 'https://api.deezer.com/search/artist?q=' + search; 
 let urlalbums = proxy + 'https://api.deezer.com/search/album?q=' + search;
 
-fetch(urltracks)
+
+    fetch(urltracks)
     .then(function(response){
         return response.json();
     })
@@ -69,4 +70,6 @@ fetch(urltracks)
     .catch(function(error){
         console.log(error)
     })
+
+
 
