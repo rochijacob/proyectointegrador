@@ -13,31 +13,38 @@
     <script src="scripts/dropdown_menu.js"></script>
 </head>
 <body>
-   <nav>
-      <div class="nav_mobile">
-      <a class="hamburgerIcon" onclick="menuOpen()" href="#">
-        <div>
-          <i class="material-icons">menu</i>
-        </div>
-      </a>
-      <ul>
-        <li style="text-align: left;"><a class="icon" href="index.html"><img src="imagenes/logos/blue.png" width="130px"></a></li>
-        <div id="show">
-          <li class="hidden"><a href="index.html">HOME</a></li>
-          <li class="hidden"><a href="artistas.html">ARTISTAS</a></li>
-          <li class="hidden"><a href="playlist.html">PLAYLIST</a></li>
-        </div>
-      </ul>
-      </div>
-    </nav> 
+  <div>
     <nav>
-      <div class="nav_desktop">
-          <a class="icon_desktop" href="index.html"><img src="imagenes/logos/blue.png" width="130px"></a>
-          <a  class="nav_text"  href="index.html">Home</a>
-          <a class="nav_text"  href="artistas.html">Artistas</a>
-          <a class="nav_text" href="playlist.html">Playlist</a>
-      </div>
+        <div class="nav_mobile">
+        <a class="hamburgerIcon" onclick="menuOpen()" href="#">
+          <div>
+            <i class="material-icons">menu</i>
+          </div>
+        </a>
+        <ul>
+          <li style="text-align: left;"><a class="icon" href="index.html"><img src="imagenes/logos/blue.png" width="130px"></a></li>
+          <div id="show">
+            <li class="hidden"><a href="index.html">HOME</a></li>
+            <li class="hidden"><a href="artistas.html">ARTISTAS</a></li>
+            <li class="hidden"><a href="albums.html">ALBUMS</a></li>
+            <li class="hidden"><a href="playlist.html">PLAYLIST</a></li>
+            <li class="hidden"><a href="search.html"><span class="material-icons">search</span></a></li>
+          </div>
+        </ul>
+        </div>
     </nav>
+    <nav>
+        <div class="nav_desktop">
+            <a class="icon_desktop" href="index.html"><img src="imagenes/logos/blue.png" width="130px"></a>
+            <a  class="nav_text"  href="index.html">Home</a>
+            <a class="nav_text"  href="artistas.html">Artistas</a>
+            <a class="nav_text"  href="albums.html">Albums</a>
+            <a class="nav_text" href="playlist.html">Playlist</a>
+            <a class="nav_text search-desktop" href="search.html"><span class="material-icons">search</span></a>
+        </div>
+      </nav> 
+
+</div>
    <main>
       <h1 class=playlist>Tu Playlist</h1>
       <h4 class="armatuplaylist">Diseñala con tus canciones favoritas!</h4>
@@ -46,6 +53,7 @@
 <div class="main-detail-containter">
    <p class="hide">hidden content</p>
  <div class="the-songs playlist-song">
+   <ul class="playlistWrapper"></ul>
                  
    <div class="a-song a-playlist">
       <img src="imagenes/jcolealbum.jpg" width="100%" alt="j cole album">
