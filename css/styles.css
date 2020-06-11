@@ -602,7 +602,17 @@ p.hide{
     margin: 10px;
 }
 
+.text-a {
+  letter-spacing: 1.6px;
+  font-size: 18.5;
+  margin: 10px;
+  text-align: left;
+}
 
+.text-b {
+  letter-spacing: 1.6px;
+  text-align: left;
+}
 
 @media(min-width:768px){
   /*CAM*/
@@ -862,10 +872,10 @@ p.hide{
     margin: 0 20px;
   }
   .search-img {
-    width: 100px;
+    width: 90px;
 }
   .rounded-img {
-    width: 100px;
+    width: 90px;
   }
   .some-songs {
     margin: 40px 20px;
@@ -908,7 +918,7 @@ p.hide{
     margin: 0 200px;
   }
   .track-search-list {
-    padding: 10px 90px;
+    padding: 4px 70px;
   }
 }
 @media(min-width:1600px){
@@ -926,5 +936,11 @@ p.hide{
   }
   .track-search-list {
     padding: 5px 120px;
+  }
+  .search-img {
+    width: 100px;
+}
+  .rounded-img {
+    width: 100px;
   }
 }
