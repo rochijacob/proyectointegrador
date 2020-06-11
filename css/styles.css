@@ -278,6 +278,12 @@ nav > ul > li:first-child {
   width: 70px;
 }
 
+.rounded-img {
+  margin: 5px;
+  padding: 2px;
+  border-radius: 50% !important;
+}
+
 .songlists {
   background-color: #52525241;
   border-radius: 10px;
@@ -596,6 +602,8 @@ p.hide{
     margin: 10px;
 }
 
+
+
 @media(min-width:768px){
   /*CAM*/
   .text{
@@ -689,8 +697,8 @@ p.hide{
     font-size: 30px;
   }
   .detail-image img {
-    width: 250px;
-    margin-right: 10px;
+    width: 227px;
+    margin-right: 40px;
   }
   .artist-information {
     font-size: 18px;
@@ -752,7 +760,13 @@ p.hide{
   .armatuplaylist{
     font-size: 20px;
   }
+  .track-search-list {
+    margin: 3px 50px;
+    padding: 0px 70px;
+  }
 }
+
+
 
 @media(min-width:1024px){
   body {
@@ -847,6 +861,12 @@ p.hide{
     grid-template-columns: 1fr 4.5fr 1fr;
     margin: 0 20px;
   }
+  .search-img {
+    width: 100px;
+}
+  .rounded-img {
+    width: 100px;
+  }
   .some-songs {
     margin: 40px 20px;
   }
@@ -887,6 +907,9 @@ p.hide{
   .a-playlist {
     margin: 0 200px;
   }
+  .track-search-list {
+    padding: 10px 90px;
+  }
 }
 @media(min-width:1600px){
   nav a {
@@ -900,5 +923,8 @@ p.hide{
   }
   .socialmedia-detail {
     margin: 30px 300px;
+  }
+  .track-search-list {
+    padding: 5px 120px;
   }
 }
