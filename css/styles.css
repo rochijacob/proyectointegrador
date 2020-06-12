@@ -480,11 +480,11 @@ nav > ul > li:first-child {
   letter-spacing: 2.5px;
 }
 
-.interprete {
+.subtitulo1 {
   padding: 10px;
 }
 
-.album-detalle {
+.subtitulo2 {
   padding: 10px;
 }
 
@@ -493,6 +493,14 @@ nav > ul > li:first-child {
   grid-template-columns: 1fr 2fr;
 }
 
+
+.text-grid, .main-detail-container, .grid-detail {
+  max-height: 500px !important;
+}
+
+.image-detalle {
+  overflow: hidden;
+}
 
 
 
@@ -963,12 +971,4 @@ label {
   .rounded-img {
     width: 100px;
   }
-}
-
-.text-grid, .main-detail-container, .grid-detail {
-  max-height: 500px !important;
-}
-
-.image-detalle {
-  overflow: hidden;
 }

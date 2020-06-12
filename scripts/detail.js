@@ -13,20 +13,20 @@ fetch(url)
         console.log(datos); //Me va a dar los datos de 1 cancion
         //Teng que capturar titulo, interprete, y album
         let image = document.querySelector(".image-detalle");
-        image.innerHTML += '<img src="' + datos.album.cover_big + '">';
+        image.innerHTML += '<img src="' + datos.album.cover_big + '"style="border-radius: 10px 0px 0px 10px;">';
         
         let titulo = document.querySelector('.titulo-detalle');
         titulo.innerHTML += datos.title;
 
-        let interprete = document.querySelector('.interprete');
-        interprete.innerHTML += datos.artist.name;
+        let interprete = document.querySelector('.subtitulo1');
+        interprete.innerHTML += 'Artista: ' + '<a href ="generaldetail.html?id=' + datos.artist.id  +'">'+ datos.artist.name +'</a>';
 
-        let album = document.querySelector('.album-detalle');
-        album.innerHTML += datos.album.title;
+        let album = document.querySelector('.subtitulo2');
+        album.innerHTML += 'Album: ' + '<a href ="generaldetail.html?id=' + datos.album.id  +'">'+ datos.album.title +'</a>';
 
         //Agregamos el player
-        let player = document.querySelector('iframe');
-        player.src = 'https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=600&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=' + idTrack + '&app_id=1'
+        let player = document.querySelector('.widget-player');
+        player.innerHTML += '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=600&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=' + idTrack + '&app_id=1" width="80%" height="350"></iframe>'
 
     })
     .catch(function(error) {
