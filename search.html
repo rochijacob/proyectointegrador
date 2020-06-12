@@ -45,21 +45,24 @@
       <main>
         <br>
         <form action="search.html" method="GET">
-          <label>
-            <input type="radio" name="option" id="input" value="track" checked="checked" class="option">
-            track
-          </label>
-          <label>
-            <input type="radio" name="option" id="input" value="artist" class="option">
-            artist
-          </label>
-          <label>
-            <input type="radio" name="option" id="input" value="album" class="option">
-            album
-          </label>
-
-          <input type="text" name="search" placeholder="Escriba aqui..." class="search-box" autocomplete="none" >
-          <button type="submit" class="search-button">SEARCH</button>
+            <div class="search-bar">
+                <input type="text" name="search" placeholder="Escriba aqui..." class="search-box" autocomplete="none">
+                <button type="submit" class="search-button"><span class="icon"><i class="fa fa-search"></i></span><p> SEARCH</p></button>
+            </div>
+          <div class="search-filters">
+              <label class="container">
+              <input type="radio" name="option" id="input" value="track" checked="checked" class="option">
+              Track
+            </label>
+            <label>
+              <input type="radio" name="option" id="input" value="artist" class="option">
+              Artist
+            </label>
+            <label>
+              <input type="radio" name="option" id="input" value="album" class="option">
+              Album
+            </label>
+          </div>
       </form>
       <h1 class="display-resultados"></h1>
       <div class="main-detail-containter">
