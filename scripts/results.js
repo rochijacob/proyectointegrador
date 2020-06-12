@@ -43,35 +43,4 @@ if(search !== null){
         console.log(error)
     })
 }
-    // fetch(urlartists)
-    // .then(function(response){
-    //     return response.json();
-    // })
-    // .then(function(datos){
-    //     console.log(datos);
-    //     let lista = document.querySelector('.lista')
-    //     let resultados = datos.data;
-    //     console.log(resultados);
-    //     resultados.forEach(resultado => {
-    //         lista.innerHTML += '<li class="track-search-list"><a href="#" class="a-song">' + '<img src="' +  resultado.picture  + '" class="rounded-img">'+ '<div class="song-text"><h4 class="text-a">' + resultado.name + '</h4></div>'+ '<i class="material-icons">keyboard_arrow_right</i>' +'</a></li>';
-    //     });
-    // })
-    // .catch(function(error){
-    //     console.log(error)
-    // })
-    // fetch(urlalbums)
-    // .then(function(response){
-    //     return response.json();
-    // })
-    // .then(function(datos){
-    //     console.log(datos);
-    //     let lista = document.querySelector('.lista')
-    //     let resultados = datos.data;
-    //     console.log(resultados);
-    //     resultados.forEach(resultado => {
-    //         lista.innerHTML += '<li class="track-search-list"><a href="#" class="a-song">' + '<img src="' +  resultado.cover  + '" class="search-img">'+ '<div class="song-text"><h4 class="text-a">' + resultado.title + '</h4><p class="text-b">'+ resultado.artist.name + '</p></div>' + '<i class="material-icons">keyboard_arrow_right</i>' + '</a></li>';
-    //     });
-    // })
-    // .catch(function(error){
-    //     console.log(error)
-    // })
+    
