@@ -964,3 +964,11 @@ label {
     width: 100px;
   }
 }
+
+.text-grid, .main-detail-container, .grid-detail {
+  max-height: 500px !important;
+}
+
+.image-detalle {
+  overflow: hidden;
+}
