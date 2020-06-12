@@ -10,7 +10,12 @@ arrayOpciones.forEach(function(option){
 })
 let proxy = "https://cors-anywhere.herokuapp.com/";
 let urltracks = proxy + 'https://api.deezer.com/search/' + option + '?q=' + search; 
+
+
 if(search !== null){
+    let searchResults = document.querySelector('.display-resultados');
+    searchResults.innerHTML += 'Resultados de Busqueda...';
+    
     fetch(urltracks)
     .then(function(response){
         return response.json();

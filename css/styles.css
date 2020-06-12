@@ -603,7 +603,12 @@ p.hide{
     color: white;
     font-size: 15px;
     margin: 10px;
-    text-shadow: black;
+    text-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.144);
+    letter-spacing: 1.8px;
+}
+
+label {
+  padding: 8px;
 }
 
 .text-a {
@@ -616,6 +621,7 @@ p.hide{
 .text-b {
   letter-spacing: 1.6px;
   text-align: left;
+  font-size: 14px;
 }
 
 @media(min-width:768px){
@@ -734,7 +740,7 @@ p.hide{
     font-size: 20px;
   }
   .song-text p {
-    font-size: 15px;
+    font-size: 15.5px;
   }
   .albums {
     gap: 10px;
