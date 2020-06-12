@@ -13,7 +13,7 @@ fetch(url)
         console.log(datos); //Me va a dar los datos de 1 cancion
         //Teng que capturar titulo, interprete, y album
         let image = document.querySelector(".image-detalle");
-        image.innerHTML += '<img src="' + datos.album.cover + '">';
+        image.innerHTML += '<img src="' + datos.album.cover_big + '">';
         
         let titulo = document.querySelector('.titulo-detalle');
         titulo.innerHTML += datos.title;

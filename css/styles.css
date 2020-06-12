@@ -488,6 +488,16 @@ nav > ul > li:first-child {
   padding: 10px;
 }
 
+.grid-detail {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+
+
+
+
+
 /*LOLO*/
 p.hide{
   visibility: hidden;
