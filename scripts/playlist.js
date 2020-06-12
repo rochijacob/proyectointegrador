@@ -18,16 +18,23 @@ if(recuperoStorage == null){
 function buscarYMostrarTrack(idTrack){
     let proxy = "https://cors-anywhere.herokuapp.com/";
     let url = proxy + "https://api.deezer.com/track/" + idTrack;
+    let lista = document.querySelector('.playlistWrapper')
 
     fetch(url)
     .then(function(response){
         return response.json();
     })
     .then(function(track) {
-        playlistWrapper.innerHTML += '<li>' + '<a href="track.html?id=' + track.id + '">' + track.title + '<a/></li>'
+
+        let lista = document.querySelector('.playlistWrapper')
+
+        lista.innerHTML += '<li><a href= "generaldetail.html?id=' + track.id + '" class="a-song">'+ '<img src="'+ track.album.cover + '" class="search-img">'+ '<div class="song-text"><h4 class="text-a">' + track.title + ' </h4><p class="text-b">' + track.artist.name + '</p></div>'+ '<i class="material-icons">more_horiz</i>' +'</a></li>'
+        //lista.innerHTML += '<li>' + '<a href="track.html?id=' + track.id + '" class="a-song">'+ '<img src="'+ track.album.cover + '" class="search-img">'+ '<div class="song-text"><h4 class="text-a">' + track.title + ' </h4><p class="text-b">' + track.artist.name + '</p></div>'+ '<i class="material-icons">more_horiz</i>' +'</a></li>'
+        //lista.innerHTML += '<li>' + '<a href="track.html?id=' + track.id + '">' + track.title + '<a/></li>'
 
     }) 
+    
     .catch(function(errors){
         console.log(errors);
     })
-};
+}
