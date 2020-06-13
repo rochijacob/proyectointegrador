@@ -677,6 +677,13 @@ label {
   padding: 0;
 }
 
+li.detail-margins {
+  margin: 3px;
+  padding: 0px 10px;
+}
+
+
+
 @media(max-width:768px){
   .image-detalle img {
     width: 100%;
@@ -858,17 +865,6 @@ label {
     display: block;
     float: right;
   }
-  .grid-detail {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  }
-  .width {
-    padding: 0px;
-    width: initial;
-  }
-  .text-grid, .main-detail-container, .grid-detail {
-    max-height: 500px !important;
-  }
 }
 
 
@@ -1021,6 +1017,25 @@ label {
   .track-search-list {
     padding: 4px 70px;
   }
+  .grid-detail {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .width {
+    padding: 0px;
+    width: initial;
+  }
+  .text-grid, .main-detail-container, .grid-detail {
+    max-height: 500px !important;
+  }
+  .scroll-box {
+    height: 320px;
+    overflow: scroll;
+  }
+  li.detail-margins {
+    margin: 10px 5px;
+  }
+  
 }
 @media(min-width:1600px){
   nav a {

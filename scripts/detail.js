@@ -156,7 +156,16 @@ if(type == 'album'){
             let releaseDate = document.querySelector('.subtitulo2');
             releaseDate.innerHTML += datos.release_date;
 
-            
+            let unorderedList = document.querySelector('.widget-player')
+            unorderedList.innerHTML += '<section class="scroll-box"><ul class="lista"></ul></section>'
+            let lista = document.querySelector('.lista')
+            let albumTracks = datos.tracks.data;
+            let someTracks = '';
+            for (let i = 0; i < albumTracks.length; i++) {
+                someTracks += '<li class="detail-margins"><a href="generaldetail.html?id=' + albumTracks[i].id + '&type=track' + '" class="a-song">'+ '<img src="'+ datos.cover + '" class="search-img">'+ '<div class="song-text"><h4 class="text-a">' + albumTracks[i].title + ' </h4><p class="text-b">' + albumTracks[i].artist.name + '</p></div>'+ '<i class="material-icons">more_horiz</i>' +'</a></li>';
+                
+            }
+            lista.innerHTML = someTracks
 
 
         })
