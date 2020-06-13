@@ -20,7 +20,6 @@ arrayOpciones.forEach(function(unaOpcion){
 let proxy = "https://cors-anywhere.herokuapp.com/";
 let urltracks = proxy + 'https://api.deezer.com/search/' + option + '?q=' + search;
 
-
 if(search !== null){
     let searchResults = document.querySelector('.display-resultados');
     searchResults.innerHTML += 'Resultados de Busqueda...';
@@ -49,7 +48,7 @@ if(search !== null){
         if (option == "artist") {
             resultados.forEach(resultado => {
                 lista.innerHTML += '<li class="track-search-list"><a href="generaldetail.html?id='+ resultado.id + '&type=artist" class="a-song">' + '<img src="' + resultado.picture + '" class="rounded-img">' + '<div class="song-text"><h4 class="text-a">' + resultado.name + '</h4></div>' + '<i class="material-icons">keyboard_arrow_right</i>' + '</a></li>';
-            });
+            })
         }
     })
     .catch(function(error){

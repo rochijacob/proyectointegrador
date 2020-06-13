@@ -1,5 +1,6 @@
 ::-webkit-scrollbar {
   width: 8px;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar-track {
@@ -1076,6 +1077,7 @@ li.detail-margins {
   .scroll-box {
     height: 320px;
     overflow: scroll;
+    overflow-x: hidden;
   }
   li.detail-margins {
     margin: 10px 5px;

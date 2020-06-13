@@ -115,8 +115,9 @@ if(type == 'artist'){
 
             let titulo = document.querySelector('.titulo-detalle');
             titulo.innerHTML += datos.name;
-            /*
-            let topArtist = proxy + '"https://api.deezer.com/artist/'+ idGeneral + '/top?limit=5"'
+
+            
+            let topArtist = proxy + 'https://api.deezer.com/artist/'+ idGeneral + '/top?limit=5'
             console.log(topArtist);
             fetch(topArtist)
                 .then(function(response){
@@ -129,7 +130,7 @@ if(type == 'artist'){
                 })
                 .catch(function(error) {
                     console.log(error);
-                }) */
+                }) 
 
         })
         .catch(function(error) {
