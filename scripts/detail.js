@@ -33,7 +33,7 @@ fetch(urlGeneral)
         player.innerHTML += '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=600&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=' + idGeneral + '&app_id=1" width="80%" height="350"></iframe>';
 
         let addButtons = document.querySelector('.add-buttons');
-        addButtons.innerHTML += '<p><a href="#" class="agregar">Agregar a playlist</a></p><p><a href="index.html" class="tops">Volver a Home</a></p><p><a href="playlist.html">Ver Playlist</a></p>'       
+        addButtons.innerHTML += '<p><a href="#" class="agregar">Agregar a playlist</a></p>'+'<p><a href="index.html" class="tops">Volver a Home</a></p>'+'<p><a href="playlist.html">Ver Playlist</a></p>'       
 
     })
     .catch(function(error) {
@@ -45,7 +45,8 @@ fetch(urlGeneral)
 
     //Paso 1
     let recuperoStorage = localStorage.getItem('playlist');
-
+    console.log(recuperoStorage);
+    
     //Si todavia no tengo tracks en mi playlist
     if(recuperoStorage == null){
         //Creo una lista vacia
