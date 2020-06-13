@@ -488,9 +488,7 @@ nav > ul > li:first-child {
   padding: 10px;
 }
 
-.text-grid, .main-detail-container, .grid-detail {
-  max-height: 500px !important;
-}
+
 
 .image-detalle img {
   overflow: hidden;
@@ -867,6 +865,9 @@ label {
   .width {
     padding: 0px;
     width: initial;
+  }
+  .text-grid, .main-detail-container, .grid-detail {
+    max-height: 500px !important;
   }
 }
 

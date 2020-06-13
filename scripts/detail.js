@@ -95,9 +95,6 @@ fetch(urlGeneral)
 
 }
 
-let topArtist = proxy + '"https://api.deezer.com/artist/'+ idGeneral + '/top?limit=5"'
-console.log(topArtist);
-
 
 if(type == 'artist'){
     fetch(urlGeneral)
@@ -116,24 +113,26 @@ if(type == 'artist'){
 
             let titulo = document.querySelector('.titulo-detalle');
             titulo.innerHTML += datos.name;
-
+            /*
+            let topArtist = proxy + '"https://api.deezer.com/artist/'+ idGeneral + '/top?limit=5"'
+            console.log(topArtist);
+            fetch(topArtist)
+                .then(function(response){
+                    return response.json();
+                    
+                })
+                .then(function(data){
+                    console.log(data);
+                    
+                })
+                .catch(function(error) {
+                    console.log(error);
+                }) */
 
         })
         .catch(function(error) {
             console.log(error);
         })
-    fetch(topArtist)
-        .then(function(response){
-            console.log(response)
-            return response.json();
-        })
-        .then(function(datos) {
-            console.log(datos)
-        })
-        .catch(function(error) {
-            console.log(error);
-        })
-
 }
 
 if(type == 'album'){
@@ -156,6 +155,9 @@ if(type == 'album'){
 
             let releaseDate = document.querySelector('.subtitulo2');
             releaseDate.innerHTML += datos.release_date;
+
+            
+
 
         })
         .catch(function(error) {
