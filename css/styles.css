@@ -572,6 +572,10 @@ p.hide{
   font-size: 10%;
 }
 
+.deezer {
+  width: 30%;
+}
+
 /* Dropup Button */
 .dropbtn {
   background-color: transparent;
@@ -911,6 +915,9 @@ li.detail-margins {
     display: block;
     float: right;
   }
+  .deezer {
+    width: 15%;
+  }
 }
 
 
@@ -1086,7 +1093,9 @@ li.detail-margins {
     display: inline-block;
     margin: 0px 30px;
   }
-  
+  .deezer {
+    width: 10%;
+  }
 }
 @media(min-width:1600px){
   nav a {
