@@ -1,11 +1,15 @@
 let queryString = location.search;
 let datos = new URLSearchParams(queryString);
-let idTrack = datos.get('id'); //Nos permite obtener el id de la url
+let idGeneral = datos.get('id');//Nos permite obtener el id de la url
+let type = datos.get('type'); 
+console.log(type);
+
 
 let proxy = "https://cors-anywhere.herokuapp.com/";
-let url = proxy + 'https://api.deezer.com/track/' + idTrack; //La ruta tiene cors, los datos de deezer y el id, cambio el path al de 1 track
+let urlGeneral = proxy + 'https://api.deezer.com/' + type + '/' + idGeneral; //La ruta tiene cors, los datos de deezer y el id, cambio el path al de 1 track
 
-fetch(url)
+if(type == 'track'){
+fetch(urlGeneral)
     .then(function(response){
         return response.json();
     })
@@ -13,20 +17,23 @@ fetch(url)
         console.log(datos); //Me va a dar los datos de 1 cancion
         //Teng que capturar titulo, interprete, y album
         let image = document.querySelector(".image-detalle");
-        image.innerHTML += '<img src="' + datos.album.cover + '">';
+        image.innerHTML += '<img src="' + datos.album.cover_big + '"style="border-radius: 10px 0px 0px 10px;">';
         
         let titulo = document.querySelector('.titulo-detalle');
         titulo.innerHTML += datos.title;
 
-        let interprete = document.querySelector('.interprete');
-        interprete.innerHTML += datos.artist.name;
+        let interprete = document.querySelector('.subtitulo1');
+        interprete.innerHTML += '<h3> Artista: ' + '<a href ="generaldetail.html?id=' + datos.artist.id  + '&type=artist">'+ datos.artist.name +'</a></h3>';
 
-        let album = document.querySelector('.album-detalle');
-        album.innerHTML += datos.album.title;
+        let album = document.querySelector('.subtitulo2');
+        album.innerHTML += 'Album: ' + '<a href ="generaldetail.html?id=' + datos.album.id  +'&type=album">'+ datos.album.title +'</a>';
 
         //Agregamos el player
-        let player = document.querySelector('iframe');
-        player.src = 'https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=600&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=' + idTrack + '&app_id=1'
+        let player = document.querySelector('.widget-player');
+        player.innerHTML += '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=600&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=' + idGeneral + '&app_id=1" width="80%" height="350"></iframe>';
+
+        let addButtons = document.querySelector('.add-buttons');
+        addButtons.innerHTML += '<p><a href="#" class="agregar">Agregar a playlist</a></p><p><a href="index.html" class="tops">Volver a Home</a></p><p><a href="playlist.html">Ver Playlist</a></p>'       
 
     })
     .catch(function(error) {
@@ -49,7 +56,7 @@ fetch(url)
     }
 
     //me fijo que no este en la lista y cambio el texto del boton
-    if(playlist.includes(idTrack)){ //Hay que agregar el id del track
+    if(playlist.includes(idGeneral)){ //Hay que agregar el id del track
         document.querySelector('.agregar').innerHTML = "Quitar de la playlist"; 
     }
 
@@ -61,21 +68,21 @@ fetch(url)
         //detener el a
         e.preventDefault();
 
-        if (playlist.includes(idTrack)) {
+        if (playlist.includes(idGeneral)) {
             //Si el track esta, tenemos que quitarlo. Tenemos que encontar el track dentro del array
-            let indiceEnElArray = playlist.indexOf(idTrack);
+            let indiceEnElArray = playlist.indexOf(idGeneral);
             playlist.splice(indiceEnElArray, 1);
             document.querySelector('.agregar').innerHTML = "Agregar a playlist";
             console.log(playlist);
             
         } else {
-            playlist.push(idTrack);
+            playlist.push(idGeneral);
             document.querySelector('.agregar').innerHTML = "Quitar de la playlist";
             }
 
         /*
         //Quiero agregarle el id de track, push me permite agregarle elementos
-        playlist.push(idTrack);
+        playlist.push(idGeneral);
         document.querySelector('.agregar').innerHTML = "Quitar de la playlist"; //Le estoy cambiando la vista al usuario
         */
         
@@ -85,3 +92,73 @@ fetch(url)
         console.log(localStorage);
         
     })
+
+}
+
+let topArtist = proxy + '"https://api.deezer.com/artist/'+ idGeneral + '/top?limit=5"'
+console.log(topArtist);
+
+
+if(type == 'artist'){
+    fetch(urlGeneral)
+        .then(function(response){
+            return response.json();
+            
+        })
+        .then(function(datos){
+            console.log(datos); //Me va a dar los datos de 1 cancion
+            
+            let image = document.querySelector(".image-detalle");
+            image.innerHTML += '<img src="' + datos.picture_big + '">';
+
+            let followers  = document.querySelector('.social_followers');
+            followers.innerHTML += '<p class="followers"><span style="color:#e674e0;">&#10084;</span>'+ datos.nb_fan +'</p>'
+
+            let titulo = document.querySelector('.titulo-detalle');
+            titulo.innerHTML += datos.name;
+
+
+        })
+        .catch(function(error) {
+            console.log(error);
+        })
+    fetch(topArtist)
+        .then(function(response){
+            console.log(response)
+            return response.json();
+        })
+        .then(function(datos) {
+            console.log(datos)
+        })
+        .catch(function(error) {
+            console.log(error);
+        })
+
+}
+
+if(type == 'album'){
+    fetch(urlGeneral)
+        .then(function(response){
+            return response.json();
+            
+        })
+        .then(function(datos){
+            console.log(datos); //Me va a dar los datos de 1 cancion
+            
+            let image = document.querySelector(".image-detalle");
+            image.innerHTML += '<img src="' + datos.cover_big + '"style="border-radius: 10px 0px 0px 10px;">';
+
+            let titulo = document.querySelector('.titulo-detalle');
+            titulo.innerHTML += datos.title;
+
+            let interprete = document.querySelector('.subtitulo1');
+            interprete.innerHTML += '<h3> Artista: ' + '<a href ="generaldetail.html?id=' + datos.artist.id  + '&type=artist">'+ datos.artist.name +'</a></h3>';
+
+            let releaseDate = document.querySelector('.subtitulo2');
+            releaseDate.innerHTML += datos.release_date;
+
+        })
+        .catch(function(error) {
+            console.log(error);
+        })
+}

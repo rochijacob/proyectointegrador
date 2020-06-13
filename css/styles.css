@@ -480,13 +480,33 @@ nav > ul > li:first-child {
   letter-spacing: 2.5px;
 }
 
-.interprete {
+.subtitulo1 {
   padding: 10px;
 }
 
-.album-detalle {
+.subtitulo2 {
   padding: 10px;
 }
+
+.text-grid, .main-detail-container, .grid-detail {
+  max-height: 500px !important;
+}
+
+.image-detalle img {
+  overflow: hidden;
+}
+
+.width {
+  padding: 20px;
+}
+
+p.followers {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 1.8px;
+}
+
+
 
 /*LOLO*/
 p.hide{
@@ -579,20 +599,34 @@ p.hide{
 
 .search-box {
   border-radius: 50px;
-  padding: 13px 20px;
-  background-color: white;
+  padding: 13px 15px;
   border-width: 0;
   border-color: transparent;
   cursor: pointer;
   border-style: none;
   font-size: 16px;
   font-family: 'Montserrat';
-  width: 300px;
+  width: 320px;
+  float: left;
+  margin-left: 20px;
 }
 
+input.search-box {
+  background: rgba(255, 255, 255, 0.178);
+  border: none;
+  color: #cecece;
+}
+
+input.search-box::-webkit-input-placeholder {
+  color: #cecece;
+}
+
+input:focus {
+  outline: none;
+}
 .search-button {
   border-radius: 50px;
-    padding: 11px 10px;
+    padding: 11px 20px;
     background-color: #7acfe8;
     border-width: 0;
     border-color: transparent;
@@ -602,9 +636,22 @@ p.hide{
     font-weight: bold;
     color: white;
     font-size: 15px;
-    margin: 10px;
+    margin: 0;
     text-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.144);
     letter-spacing: 1.8px;
+}
+
+button p {
+  margin: 0 auto;
+  display: none;
+}
+
+.search-bar {
+  padding: 12px;
+}
+
+.search-filters{
+  margin-right: 150px;
 }
 
 label {
@@ -623,6 +670,21 @@ label {
   text-align: left;
   font-size: 14px;
 }
+
+.search-padding {
+  padding: 10px 0px;
+}
+
+.track-search-list {
+  padding: 0;
+}
+
+@media(max-width:768px){
+  .image-detalle img {
+    width: 100%;
+  }
+}
+
 
 @media(min-width:768px){
   /*CAM*/
@@ -784,6 +846,28 @@ label {
     margin: 3px 50px;
     padding: 0px 70px;
   }
+  .search-box {
+    padding: 17px 20px; 
+    width: 340px;
+    float: none;
+    margin-left: 0; 
+  }
+  .search-button {
+    margin: 10px;
+    padding: 11px 10px;  
+  }
+  button p {
+    display: block;
+    float: right;
+  }
+  .grid-detail {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .width {
+    padding: 0px;
+    width: initial;
+  }
 }
 
 
@@ -907,6 +991,12 @@ label {
   .back {
     padding: 20px 30px;
     font-size: 20px;
+  }
+  .width {
+    margin: 30px 100px;
+  }
+  .image-detalle img {
+    border-radius: 10px 0px 0px 10px;
   }
   /*LOLO*/
   .playlist{

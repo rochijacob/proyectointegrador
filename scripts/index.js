@@ -11,7 +11,7 @@ fetch(url)
         let list = document.querySelector('.pepito');
 
         artists.forEach(function(artist){
-        list.innerHTML += '<li class="track-search-list"><a href="#" class="a-song">' + '<img src="' + artist.picture + '" class="artlistImg">' + '<div class="song-text"><h4 class="item-2">' + artist.name + '</h4></div>' + '<i class="material-icons">more_horiz</i>' + '</a></li>';
+        list.innerHTML += '<li class="track-search-list"><a href="#" class="a-song">' + '<img src="' + artist.picture + '" class="rounded-img">' + '<div class="song-text"><h4 class="text-a">' + artist.name + '</h4></div>' + '<i class="material-icons">keyboard_arrow_right</i>' + '</a></li>';
         })
     })
     .catch(function(error){
