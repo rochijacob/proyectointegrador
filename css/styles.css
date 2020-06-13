@@ -682,8 +682,6 @@ li.detail-margins {
   padding: 0px 10px;
 }
 
-
-
 @media(max-width:768px){
   .image-detalle img {
     width: 100%;
@@ -1034,6 +1032,10 @@ li.detail-margins {
   }
   li.detail-margins {
     margin: 10px 5px;
+  }
+  .h3-inline {
+    display: inline-block;
+    margin: 0px 30px;
   }
   
 }

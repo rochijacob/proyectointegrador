@@ -63,7 +63,8 @@ fetch(urlGeneral)
 
     //Paso 2: agregar un track a la playlist
     let agregar = document.querySelector('.agregar');
-
+    console.log(agregar);
+    
     agregar.addEventListener('click', function(e){
         //detener el a
         e.preventDefault();
@@ -151,7 +152,12 @@ if(type == 'album'){
             titulo.innerHTML += datos.title;
 
             let interprete = document.querySelector('.subtitulo1');
-            interprete.innerHTML += '<h3> Artista: ' + '<a href ="generaldetail.html?id=' + datos.artist.id  + '&type=artist">'+ datos.artist.name +'</a></h3>';
+            let genres = datos.genres.data;
+            let elGenero = '';
+            for (let i = 0; i < 1; i++){
+                elGenero = '<h3 class="h3-inline"> Genero: ' + '<a href="generaldetail.html?id=' + datos.genre_id + '&type=genre">' + genres[i].name + '</a></h3>';
+            }
+            interprete.innerHTML += '<h3 class="h3-inline"> Artista: ' + '<a href ="generaldetail.html?id=' + datos.artist.id  + '&type=artist">'+ datos.artist.name +'</a></h3>' + elGenero;
 
             let releaseDate = document.querySelector('.subtitulo2');
             releaseDate.innerHTML += datos.release_date;
@@ -168,6 +174,21 @@ if(type == 'album'){
             lista.innerHTML = someTracks
 
 
+        })
+        .catch(function(error) {
+            console.log(error);
+        })
+}
+
+if(type == 'genre'){
+    fetch(urlGeneral)
+        .then(function(response){
+            return response.json();
+            
+        })
+        .then(function(datos){
+            console.log(datos);
+            
         })
         .catch(function(error) {
             console.log(error);
