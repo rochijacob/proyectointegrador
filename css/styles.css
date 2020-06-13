@@ -488,18 +488,22 @@ nav > ul > li:first-child {
   padding: 10px;
 }
 
-.grid-detail {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-}
-
-
 .text-grid, .main-detail-container, .grid-detail {
   max-height: 500px !important;
 }
 
-.image-detalle {
+.image-detalle img {
   overflow: hidden;
+}
+
+.width {
+  padding: 20px;
+}
+
+p.followers {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 1.8px;
 }
 
 
@@ -667,12 +671,18 @@ label {
   font-size: 14px;
 }
 
-.lista {
-  margin: 5px 0px 0px 5px;
+.search-padding {
+  padding: 10px 0px;
 }
 
 .track-search-list {
   padding: 0;
+}
+
+@media(max-width:768px){
+  .image-detalle img {
+    width: 100%;
+  }
 }
 
 
@@ -850,6 +860,14 @@ label {
     display: block;
     float: right;
   }
+  .grid-detail {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .width {
+    padding: 0px;
+    width: initial;
+  }
 }
 
 
@@ -973,6 +991,12 @@ label {
   .back {
     padding: 20px 30px;
     font-size: 20px;
+  }
+  .width {
+    margin: 30px 100px;
+  }
+  .image-detalle img {
+    border-radius: 10px 0px 0px 10px;
   }
   /*LOLO*/
   .playlist{

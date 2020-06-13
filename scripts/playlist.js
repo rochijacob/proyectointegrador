@@ -7,17 +7,17 @@ if(recuperoStorage == null){
     playlistWrapper.innerHTML += '<li> No hay canciones en tu playlist </li>'
 
 }else{
-    playlist.forEach(function(idTrack){
-        buscarYMostrarTrack(idTrack);
+    playlist.forEach(function(idGeneral){
+        buscarYMostrarTrack(idGeneral);
     
     });
 
 }
 
 
-function buscarYMostrarTrack(idTrack){
+function buscarYMostrarTrack(idGeneral){
     let proxy = "https://cors-anywhere.herokuapp.com/";
-    let url = proxy + "https://api.deezer.com/track/" + idTrack;
+    let url = proxy + "https://api.deezer.com/track/" + idGeneral;
 
     fetch(url)
     .then(function(response){
