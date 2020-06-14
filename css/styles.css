@@ -679,6 +679,11 @@ input.search-box::-webkit-input-placeholder {
 input:focus {
   outline: none;
 }
+
+button:focus {
+  outline: none;
+}
+
 .search-button {
   border-radius: 50px;
     padding: 11px 20px;
@@ -994,6 +999,7 @@ img.search-img {
   nav .nav_desktop {
     display: grid;
   }
+  
  /*CAM*/
  .favart{
   border-radius: 50%;
