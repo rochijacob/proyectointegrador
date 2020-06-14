@@ -476,13 +476,13 @@ nav > ul > li:first-child {
 }
 
 .titulo-detalle {
-  padding: 15px;
+  padding: 8px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
 }
 
 .subtitulo1 {
-  padding: 10px;
+  padding: 0px;
 }
 
 .subtitulo2 {
@@ -1099,7 +1099,20 @@ img.search-img {
     max-height: 500px !important;
   }
   .scroll-box {
+    margin: 10px;
     height: 280px;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  .scroll-box-at {
+    margin: 10px;
+    height: 320px;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  .scroll-box-artist {
+    margin: 10px;
+    height: 400px;
     overflow: scroll;
     overflow-x: hidden;
   }

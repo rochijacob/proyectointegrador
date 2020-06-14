@@ -117,7 +117,7 @@ if(type == 'artist'){
             titulo.innerHTML += datos.name;
             
             let someSongs = document.querySelector('.subtitulo1');
-            someSongs.innerHTML += '<h4> Algunas canciones del artista: </h4>';
+            someSongs.innerHTML += '<h4 style="padding: 10px;"> Algunas canciones del artista: </h4>';
 
             let topArtist = proxy + datos.tracklist;
             console.log(topArtist);
@@ -129,7 +129,7 @@ if(type == 'artist'){
                 .then(function(datos){
                     console.log(datos);
                     let unorderedList = document.querySelector('.widget-player')
-                    unorderedList.innerHTML += '<section class="scroll-box"><ul class="lista"></ul></section>';
+                    unorderedList.innerHTML += '<section class="scroll-box-at"><ul class="lista"></ul></section>';
                     let lista = document.querySelector('.lista');
                     let artistSongs = datos.data;
                     let theSong = '';
@@ -194,6 +194,8 @@ if(type == 'album'){
 }
 
 if(type == 'genre'){
+    
+    
     fetch(urlGeneral)
         .then(function(response){
             return response.json();
@@ -201,7 +203,37 @@ if(type == 'genre'){
         })
         .then(function(datos){
             console.log(datos);
-            
+            let image = document.querySelector(".image-detalle");
+            image.innerHTML += '<img src="' + datos.picture_big + '"style="border-radius: 10px 0px 0px 10px;">';
+
+            let titulo = document.querySelector('.titulo-detalle');
+            titulo.innerHTML += datos.name;
+            let urlGenre = urlGeneral + '/artists' //Esto trae los artistas del genero
+            fetch(urlGenre)
+            .then(function(response){
+                return response.json();
+                
+            })
+            .then(function (datos) {
+                
+                let unorderedList = document.querySelector('.widget-player')
+                unorderedList.innerHTML += '<section class="scroll-box-artist"><ul class="lista"></ul></section>'
+                let lista = document.querySelector('.lista')
+                let artistasGenero = datos.data;
+                console.log(artistasGenero);
+                let theArtist = '';
+
+                for (let i = 0; i < 30 ; i++) {
+                    theArtist += '<li class="detail-margins"><a href="generaldetail.html?id='+ artistasGenero[i].id + '&type=' + artistasGenero[i].type + '" class="a-song">' + '<img src="' + artistasGenero[i].picture + '" class="rounded-img">' + '<div class="song-text"><h4 class="text-a">' + artistasGenero[i].name + '</h4></div>' + '<i class="material-icons">keyboard_arrow_right</i>' + '</a></li>';
+                    
+                }
+
+                lista.innerHTML = theArtist;
+                
+            })
+            .catch(function(error) {
+                console.log(error);
+            })
         })
         .catch(function(error) {
             console.log(error);
