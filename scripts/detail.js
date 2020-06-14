@@ -115,21 +115,33 @@ if(type == 'artist'){
 
             let titulo = document.querySelector('.titulo-detalle');
             titulo.innerHTML += datos.name;
-            /*
-            let topArtist = proxy + '"https://api.deezer.com/artist/'+ idGeneral + '/top?limit=5"'
+            
+            let someSongs = document.querySelector('.subtitulo1');
+            someSongs.innerHTML += '<h4> Algunas canciones del artista: </h4>';
+
+            let topArtist = proxy + datos.tracklist;
             console.log(topArtist);
             fetch(topArtist)
                 .then(function(response){
                     return response.json();
                     
                 })
-                .then(function(data){
-                    console.log(data);
-                    
+                .then(function(datos){
+                    console.log(datos);
+                    let unorderedList = document.querySelector('.widget-player')
+                    unorderedList.innerHTML += '<section class="scroll-box"><ul class="lista"></ul></section>';
+                    let lista = document.querySelector('.lista');
+                    let artistSongs = datos.data;
+                    let theSong = '';
+                    for (let i = 0; i < 20; i++) {
+                        theSong += '<li class="detail-margins"><a href="generaldetail.html?id=' + artistSongs[i].id + '&type='+ artistSongs[i].type + '" class="a-song">'+ '<img src="'+ artistSongs[i].album.cover + '" class="search-img">'+ '<div class="song-text"><h4 class="text-a">' + artistSongs[i].title + ' </h4><p class="text-b">' + artistSongs[i].artist.name + '</p></div>'+ '<i class="material-icons">more_horiz</i>' +'</a></li>'
+                        
+                    }
+                    lista.innerHTML += theSong
                 })
                 .catch(function(error) {
                     console.log(error);
-                }) */
+                }) 
 
         })
         .catch(function(error) {

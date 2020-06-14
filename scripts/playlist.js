@@ -27,7 +27,7 @@ function buscarYMostrarTrack(idGeneral){
     .then(function(track) {
 
         let lista = document.querySelector('.playlistWrapper')
-        lista.innerHTML += '<li class="track-search-list"><a href= "generaldetail.html?id=' + track.id + '" class="a-song">'+ '<img src="'+ track.album.cover + '" class="search-img">'+ '<div class="song-text"><h4 class="text-a">' + track.title + ' </h4><p class="text-b">' + track.artist.name + '</p></div>'+ '<div class="dropup"></div>' +'</div></li>'
+        lista.innerHTML += '<li class="track-search-list"><a href= "generaldetail.html?id=' + track.id + '&type=' + track.type + '" class="a-song">'+ '<img src="'+ track.album.cover + '" class="search-img">'+ '<div class="song-text"><h4 class="text-a">' + track.title + ' </h4><p class="text-b">' + track.artist.name + '</p></div>'+ '<div class="dropup"></div>' +'</div></li>'
 
 
        

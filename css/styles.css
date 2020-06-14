@@ -730,7 +730,21 @@ label {
 
 li.detail-margins {
   margin: 3px;
-  padding: 0px 10px;
+  padding: 0px;
+}
+
+img.search-img {
+  width: 100px;
+  
+}
+
+.detail-margins a {
+  margin: 10px 0px;
+}
+
+.h3-inline {
+  font-size: 20px;
+  padding: 10px;
 }
 
 @media(max-width:768px){
@@ -917,6 +931,9 @@ li.detail-margins {
   .deezer {
     width: 15%;
   }
+  img.search-img {
+    width: 120px;
+  }
 }
 
 
@@ -1081,8 +1098,9 @@ li.detail-margins {
     max-height: 500px !important;
   }
   .scroll-box {
-    height: 320px;
+    height: 280px;
     overflow: scroll;
+    overflow-x: hidden;
   }
   li.detail-margins {
     margin: 10px 5px;

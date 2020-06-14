@@ -36,19 +36,20 @@ if(search !== null){
         console.log(resultados);
         if (option == 'track'){
             resultados.forEach(resultado => { 
-                lista.innerHTML += '<li class="track-search-list"><a href="generaldetail.html?id=' + resultado.id + '&type=track' + '" class="a-song">'+ '<img src="'+ resultado.album.cover + '" class="search-img">'+ '<div class="song-text"><h4 class="text-a">' + resultado.title + ' </h4><p class="text-b">' + resultado.artist.name + '</p></div>'+ '<i class="material-icons">more_horiz</i>' +'</a></li>'
+                lista.innerHTML += '<li class="track-search-list"><a href="generaldetail.html?id=' + resultado.id + '&type='+ resultado.type + '" class="a-song">'+ '<img src="'+ resultado.album.cover + '" class="search-img">'+ '<div class="song-text"><h4 class="text-a">' + resultado.title + ' </h4><p class="text-b">' + resultado.artist.name + '</p></div>'+ '<i class="material-icons">more_horiz</i>' +'</a></li>'
+         
             });
         }
         if (option == "album"){
             resultados.forEach(resultado => { 
                 resultados.forEach(resultado => {
-                    lista.innerHTML += '<li class="track-search-list"><a href="generaldetail.html?id='+ resultado.id +'&type=album" class="a-song">' + '<img src="' +  resultado.cover  + '" class="search-img">'+ '<div class="song-text"><h4 class="text-a">' + resultado.title + '</h4><p class="text-b">'+ resultado.artist.name + '</p></div>' + '<i class="material-icons">keyboard_arrow_right</i>' + '</a></li>';
+                    lista.innerHTML += '<li class="track-search-list"><a href="generaldetail.html?id='+ resultado.id +'&type='+ resultado.type + '" class="a-song">' + '<img src="' +  resultado.cover  + '" class="search-img">'+ '<div class="song-text"><h4 class="text-a">' + resultado.title + '</h4><p class="text-b">'+ resultado.artist.name + '</p></div>' + '<i class="material-icons">keyboard_arrow_right</i>' + '</a></li>';
                 });
             });
         }
         if (option == "artist") {
             resultados.forEach(resultado => {
-                lista.innerHTML += '<li class="track-search-list"><a href="generaldetail.html?id='+ resultado.id + '&type=artist" class="a-song">' + '<img src="' + resultado.picture + '" class="rounded-img">' + '<div class="song-text"><h4 class="text-a">' + resultado.name + '</h4></div>' + '<i class="material-icons">keyboard_arrow_right</i>' + '</a></li>';
+                lista.innerHTML += '<li class="track-search-list"><a href="generaldetail.html?id='+ resultado.id + '&type=' + resultado.type + '" class="a-song">' + '<img src="' + resultado.picture + '" class="rounded-img">' + '<div class="song-text"><h4 class="text-a">' + resultado.name + '</h4></div>' + '<i class="material-icons">keyboard_arrow_right</i>' + '</a></li>';
             });
         }
     })
