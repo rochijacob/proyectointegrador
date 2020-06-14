@@ -14,9 +14,6 @@ arrayOpciones.forEach(function(unaOpcion){
         unaOpcion.checked = true
     }
 })
-console.log(arrayOpciones);
-
-
 
 let spinner = document.getElementById("spinner");
 
@@ -26,22 +23,18 @@ let spinner = document.getElementById("spinner");
          spinner.className = spinner.className.replace("show", "");
         }, 2500);
     }
-
-
-
-
-    
+   
 let search = queryStringObj.get('search');
 
 let proxy = "https://cors-anywhere.herokuapp.com/";
 let urltracks = proxy + 'https://api.deezer.com/search/' + option + '?q=' + search;
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function() { //este event listener cubre todo lo que se va a buscar
 
     
 if(search !== null){
-    showSpinner()
-    
+    showSpinner() // ejecuta la funcion spinner SOLO cuando busco algo
+
     let searchResults = document.querySelector('.display-resultados');
     searchResults.innerHTML += 'Resultados de Busqueda...';
 
@@ -53,10 +46,9 @@ if(search !== null){
         return response.json();
     })
     .then(function(datos){
-        console.log(datos);
         let lista = document.querySelector('.lista')
         let resultados = datos.data;
-        console.log(resultados);
+
         if (option == 'track'){
             resultados.forEach(resultado => { 
                 lista.innerHTML += '<li class="track-search-list"><a href="generaldetail.html?id=' + resultado.id + '&type='+ resultado.type + '" class="a-song">'+ '<img src="'+ resultado.album.cover + '" class="search-img">'+ '<div class="song-text"><h4 class="text-a">' + resultado.title + ' </h4><p class="text-b">' + resultado.artist.name + '</p></div>'+ '<i class="material-icons">more_horiz</i>' +'</a></li>'
