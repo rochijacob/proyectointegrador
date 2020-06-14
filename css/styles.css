@@ -1175,7 +1175,27 @@ img.search-img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+    bottom: 0;
+    line-height: normal;
   }
+  .fa {
+    padding: 5px;
+    font-size: 15px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .grid-footer-column {
+    display: grid;
+    align-self: center;
+  }
+  .grid-footer-column ul {
+    text-align: center;
+  }
+  .grid-footer-column ul li {
+    display: inline-block;
+  }
+
 
 }
 @media(min-width:1600px){
