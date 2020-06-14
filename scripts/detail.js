@@ -119,6 +119,9 @@ if(type == 'artist'){
             let someSongs = document.querySelector('.subtitulo1');
             someSongs.innerHTML += '<h4 style="padding: 10px;"> Algunas canciones del artista: </h4>';
 
+            let theh3 = document.querySelector('.subtitulo2');
+            theh3.style = 'display:none;'
+
             let topArtist = proxy + datos.tracklist;
             console.log(topArtist);
             fetch(topArtist)
@@ -208,6 +211,11 @@ if(type == 'genre'){
 
             let titulo = document.querySelector('.titulo-detalle');
             titulo.innerHTML += datos.name;
+
+            let theh3 = document.querySelector('.subtitulo2');
+            theh3.style = 'display:none;'
+            
+        
             let urlGenre = urlGeneral + '/artists' //Esto trae los artistas del genero
             fetch(urlGenre)
             .then(function(response){

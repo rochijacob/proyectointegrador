@@ -1106,13 +1106,13 @@ img.search-img {
   }
   .scroll-box-at {
     margin: 10px;
-    height: 320px;
+    height: 350px;
     overflow: scroll;
     overflow-x: hidden;
   }
   .scroll-box-artist {
     margin: 10px;
-    height: 400px;
+    height: 430px;
     overflow: scroll;
     overflow-x: hidden;
   }
