@@ -1,14 +1,15 @@
+//topArtists
 let proxy = 'https://cors-anywhere.herokuapp.com/'
-let url = proxy + "https://api.deezer.com/chart/0/artists";
+let urlArtists = proxy + "https://api.deezer.com/chart/0/artists";
 
-fetch(url)
+fetch(urlArtists)
     .then(function(response){
         return response.json();
     })
     .then(function(datos){
         console.log(datos);
         let artists = datos.data;
-        let list = document.querySelector('.pepito');
+        let topArtists = document.querySelector('.chartArtists');
 
         artists.forEach(function(artist){
             let div = document.createElement('div');
@@ -38,9 +39,62 @@ fetch(url)
             div2.appendChild(link);
             link.appendChild(linktext);
             div.appendChild(item);
-            list.appendChild(div);
+            topArtists.appendChild(div);
         })
     })
     .catch(function(error){
         console.log(error);
     })
+
+//topTracks
+let urlTracks = proxy + "https://api.deezer.com/chart/0/tracks";
+
+/*fetch(urlTracks)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(datos){
+        console.log(datos);
+        let tracks = datos.data;
+        let topTracks = document.querySelector('.chartTracks')
+
+        tracks.forEach(function(track){
+            let listSongs = document.createElement('div');
+            listSongs.classList.add('songlists');
+
+            let songImg = document.createElement('img');
+            songImg.src = track.picture_small;
+            songImg.classList.add('.songslistsImg');
+            songImg.alt = track.title;
+
+            let textSong = document.createElement('div');
+            textSong.classList.add('.song-text');
+
+            let songLink = document.createElement('a');
+            songLink.herf = '#';
+
+            let songTitle = document.createElement('h4');
+            songTitle.classList.add('item-2');
+            songTitle.innerHTML = track.title;
+
+            let artistLink = document.createElement('a');
+            artistLink.href = '#';
+
+            let songArtist= document.createElement('p');
+            songArtist.classList.add('item-2');
+            songArtist.innerHTML = track.artist.name;
+
+            let puntitosItem = document.createElement('i');
+            puntitosItem.classList.add('material-icons');
+            puntitosItem.innerHTML = 'more_horiz';
+
+            listSongs.appendChild(songImg);
+            listSongs.appendChild(textSong);
+            textSong.appendChild(songLink);
+            songLink.appendChild(songTitle);
+            textSong.appendChild(songArtist);
+            songArtist.appendChild(artistLink);
+            listSongs.appendChild(puntitosItem);
+            topTracks.appendChild(listSongs);
+        })
+    })*/
