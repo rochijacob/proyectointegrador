@@ -793,6 +793,10 @@ img.search-img {
   visibility: visible;
 }
 
+
+
+
+
 @media(max-width:768px){
   .image-detalle img {
     width: 100%;
@@ -1184,7 +1188,7 @@ img.search-img {
     bottom: 0;
     line-height: normal;
   }
-  .fa {
+  .social-icon{
     padding: 5px;
     font-size: 15px;
     width: 50px;

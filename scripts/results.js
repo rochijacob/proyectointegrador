@@ -1,8 +1,7 @@
 let queryString =  location.search; 
-// console.log(queryString);
-let queryStringObj = new URLSearchParams(queryString);
-// console.log(queryStringObj);
-let search = queryStringObj.get('search');
+    // console.log(queryString);
+    let queryStringObj = new URLSearchParams(queryString);
+    // console.log(queryStringObj);
 let option = queryStringObj.get('option');
 // Mantener en el html la opción seleccionada
 
@@ -15,7 +14,26 @@ arrayOpciones.forEach(function(unaOpcion){
         unaOpcion.checked = true
     }
 })
+console.log(arrayOpciones);
 
+
+
+let spinner = document.getElementById("spinner");
+
+    function showSpinner() {
+         spinner.className = "show";
+         setTimeout(() => {
+         spinner.className = spinner.className.replace("show", "");
+        }, 1000);
+    }
+console.log(spinner);
+
+window.addEventListener('load', function() {
+
+    showSpinner()
+
+    
+    let search = queryStringObj.get('search');
 
 let proxy = "https://cors-anywhere.herokuapp.com/";
 let urltracks = proxy + 'https://api.deezer.com/search/' + option + '?q=' + search;
@@ -56,4 +74,5 @@ if(search !== null){
         console.log(error)
     })
 }
-    
+
+})
