@@ -731,9 +731,6 @@ label {
   font-size: 14px;
 }
 
-.search-padding {
-  padding: 10px 0px;
-}
 
 .track-search-list {
   padding: 0;
@@ -767,8 +764,8 @@ img.search-img {
   width: 80px;
   height: 80px;
 
-  border: 2px solid #f3f3f3;
-  border-top:3px solid #f25a41;
+  border: 2px solid #f3f3f31c;
+  border-top:6px solid #7acfe8;
   border-radius: 100%;
 
   position: absolute;

@@ -24,24 +24,30 @@ let spinner = document.getElementById("spinner");
          spinner.className = "show";
          setTimeout(() => {
          spinner.className = spinner.className.replace("show", "");
-        }, 1000);
+        }, 2500);
     }
-console.log(spinner);
 
-window.addEventListener('load', function() {
 
-    showSpinner()
+
 
     
-    let search = queryStringObj.get('search');
+let search = queryStringObj.get('search');
 
 let proxy = "https://cors-anywhere.herokuapp.com/";
 let urltracks = proxy + 'https://api.deezer.com/search/' + option + '?q=' + search;
 
+window.addEventListener('load', function() {
+
+    
 if(search !== null){
+    showSpinner()
+    
     let searchResults = document.querySelector('.display-resultados');
     searchResults.innerHTML += 'Resultados de Busqueda...';
-    
+
+    let detailContainer = document.querySelector('.main-detail-containter');
+    detailContainer.style = 'padding: 10px 0px;'
+
     fetch(urltracks)
     .then(function(response){
         return response.json();
