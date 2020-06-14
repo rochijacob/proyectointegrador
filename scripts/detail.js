@@ -122,8 +122,7 @@ if(type == 'artist'){
             let theh3 = document.querySelector('.subtitulo2');
             theh3.style = 'display:none;'
 
-            let topArtist = proxy + datos.tracklist;
-            console.log(topArtist);
+            let topArtist = proxy + datos.tracklist; //LINKEO CON EL TRACKLIST
             fetch(topArtist)
                 .then(function(response){
                     return response.json();
