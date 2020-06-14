@@ -11,7 +11,34 @@ fetch(url)
         let list = document.querySelector('.pepito');
 
         artists.forEach(function(artist){
-        list.innerHTML += '<li class="track-search-list"><a href="#" class="a-song">' + '<img src="' + artist.picture + '" class="rounded-img">' + '<div class="song-text"><h4 class="text-a">' + artist.name + '</h4></div>' + '<i class="material-icons">keyboard_arrow_right</i>' + '</a></li>';
+            let div = document.createElement('div');
+            div.classList.add('artlist');
+            
+            let img = document.createElement('img');
+            img.src = artist.picture;
+            img.classList.add('artlistImg');
+            img.alt = artist.name;
+
+            let div2 = document.createElement('div');
+            div2.classList.add('song-text');
+
+            let link = document.createElement('a');
+            link.href = '#';
+
+            let linktext = document.createElement('h4');
+            linktext.classList.add('item-2');
+            linktext.innerHTML = artist.name;
+
+            let item = document.createElement('i');
+            item.classList.add('material-icons');
+            item.innerHTML = 'more_horiz';
+            
+            div.appendChild(img);
+            div.appendChild(div2);
+            div2.appendChild(link);
+            link.appendChild(linktext);
+            div.appendChild(item);
+            list.appendChild(div);
         })
     })
     .catch(function(error){
