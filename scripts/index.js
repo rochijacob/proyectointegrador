@@ -114,6 +114,38 @@ fetch(urlAlbums)
         let topAlbums = document.querySelector('.chartAlbums')
 
         albums.forEach(function(album){
-            console.log
+            let listAlbum = document.createElement('div');
+            listAlbum.classList.add('alblist');
+
+            let albumImg = document.createElement('img');
+            albumImg.src = album.cover_big;
+            albumImg.classList.add('alblistImg');
+            albumImg.alt = album.title;
+
+            let albumLink = document.createElement('a');
+            albumLink.href = '#';
+            
+            let albumTitle = document.createElement('h4');
+            albumTitle.classList.add('item-3');
+            albumTitle.innerHTML = album.title;
+
+            let linkArtist = document.createElement('a');
+            linkArtist.href = '#';
+
+            let albumArtist = document.createElement('p');
+            albumArtist.classList.add('item-3');
+            albumArtist.innerHTML = album.artist.name;
+
+            let itemPuntitos = document.createElement('i');
+            itemPuntitos.classList.add('material-icons');
+            itemPuntitos.innerHTML = 'more_horiz';
+
+            listAlbum.appendChild(albumImg);
+            listAlbum.appendChild(albumLink);
+            albumLink.appendChild(albumTitle);
+            listAlbum.appendChild(linkArtist);
+            linkArtist.appendChild(albumArtist);
+            topAlbums.appendChild(listAlbum);
+
         })
     })
