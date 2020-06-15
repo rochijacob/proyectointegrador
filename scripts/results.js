@@ -1,7 +1,7 @@
 let queryString =  location.search; 
-    // console.log(queryString);
-    let queryStringObj = new URLSearchParams(queryString);
-    // console.log(queryStringObj);
+
+let queryStringObj = new URLSearchParams(queryString);
+
 let option = queryStringObj.get('option');
 // Mantener en el html la opción seleccionada
 

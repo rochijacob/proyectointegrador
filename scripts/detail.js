@@ -32,8 +32,9 @@ fetch(urlGeneral)
         let player = document.querySelector('.widget-player');
         player.innerHTML += '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=600&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=' + idGeneral + '&app_id=1" width="80%" height="350"></iframe>';
 
-        let addButtons = document.querySelector('.add-buttons');
-        addButtons.innerHTML += '<p><a href="#" class="agregar">Agregar a playlist</a></p>'+'<p><a href="index.html" class="tops">Volver a Home</a></p>'+'<p><a href="playlist.html">Ver Playlist</a></p>'       
+        //let addButtons = document.querySelector('.add-buttons');
+        //addButtons.innerHTML += '<p><a href="#" class="agregar">Agregar a playlist</a></p><p><a href="index.html" class="tops">Volver a Home</a></p><p><a href="playlist.html">Ver Playlist</a></p>'
+             
 
     })
     .catch(function(error) {
@@ -140,6 +141,9 @@ if(type == 'artist'){
                         
                     }
                     lista.innerHTML += theSong
+
+                    let addButtons = document.querySelector('.add-buttons');
+                    addButtons.style = 'display:none;'; 
                 })
                 .catch(function(error) {
                     console.log(error);
@@ -187,7 +191,9 @@ if(type == 'album'){
                 
             }
             lista.innerHTML = someTracks
-
+            
+            let addButtons = document.querySelector('.add-buttons');
+            addButtons.style = 'display:none;'; 
 
         })
         .catch(function(error) {
@@ -240,6 +246,9 @@ if(type == 'genre'){
 
                 lista.innerHTML = theArtist;
                 
+                let addButtons = document.querySelector('.add-buttons');
+                addButtons.style = 'display:none;'; 
+
             })
             .catch(function(error) {
                 console.log(error);
