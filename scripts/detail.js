@@ -34,7 +34,13 @@ fetch(urlGeneral)
 
         //let addButtons = document.querySelector('.add-buttons');
         //addButtons.innerHTML += '<p><a href="#" class="agregar">Agregar a playlist</a></p><p><a href="index.html" class="tops">Volver a Home</a></p><p><a href="playlist.html">Ver Playlist</a></p>'
-             
+        
+        let theh3 = document.querySelector('.subtitulo2');
+        theh3.style = 'display:block;';
+
+        let addButtons = document.querySelector('.add-buttons');
+        addButtons.style = 'display:block;'; 
+
 
     })
     .catch(function(error) {
@@ -120,8 +126,6 @@ if(type == 'artist'){
             let someSongs = document.querySelector('.subtitulo1');
             someSongs.innerHTML += '<h4 style="padding: 10px;"> Algunas canciones del artista: </h4>';
 
-            let theh3 = document.querySelector('.subtitulo2');
-            theh3.style = 'display:none;'
 
             let topArtist = proxy + datos.tracklist; //LINKEO CON EL TRACKLIST
             fetch(topArtist)
@@ -142,8 +146,7 @@ if(type == 'artist'){
                     }
                     lista.innerHTML += theSong
 
-                    let addButtons = document.querySelector('.add-buttons');
-                    addButtons.style = 'display:none;'; 
+                    
                 })
                 .catch(function(error) {
                     console.log(error);
@@ -192,8 +195,7 @@ if(type == 'album'){
             }
             lista.innerHTML = someTracks
             
-            let addButtons = document.querySelector('.add-buttons');
-            addButtons.style = 'display:none;'; 
+            
 
         })
         .catch(function(error) {
@@ -246,8 +248,7 @@ if(type == 'genre'){
 
                 lista.innerHTML = theArtist;
                 
-                let addButtons = document.querySelector('.add-buttons');
-                addButtons.style = 'display:none;'; 
+                
 
             })
             .catch(function(error) {
