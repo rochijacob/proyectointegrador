@@ -47,9 +47,9 @@ a {
   text-decoration: none;
   color: #f2f2f2;
   font-family: 'Roboto', sans-serif;
+  font-weight: bold;
   letter-spacing: 1px;
   font-size: 17px;
-  font-weight: bold;
 }
   
 li a .icon {
@@ -308,7 +308,7 @@ nav > ul > li:first-child {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.alblist img{
+.alblistImg{
   margin: 5px;
   padding: 2px;
   border-radius: 4px;
@@ -851,7 +851,7 @@ img.search-img {
     margin: 15px;
   }
 
-  .alblist img{
+  .alblistImg{
     margin: 5px;
     padding: 2px;
     border-radius: 4px;
@@ -868,6 +868,7 @@ img.search-img {
     padding: 0;
     text-align: center;
     font-size: 12px !important;
+    font-family: 'Montserrat', sans-serif;
   }
   iframe{
     height: 165px;
@@ -1026,7 +1027,7 @@ img.search-img {
     gap: 10px;
     margin: 15px;
   }
-  .alblist img{
+  .alblistImg{
     margin: 5px;
     padding: 2px;
     border-radius: 4px;
