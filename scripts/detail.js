@@ -178,7 +178,7 @@ if(type == 'album'){
             releaseDate.innerHTML += datos.release_date;
 
             let unorderedList = document.querySelector('.widget-player')
-            unorderedList.innerHTML += '<section class="scroll-box"><ul class="lista"></ul></section>'
+            unorderedList.innerHTML += '<section class="scroll-box-album"><ul class="lista"></ul></section>'
             let lista = document.querySelector('.lista')
             let albumTracks = datos.tracks.data;
             let someTracks = '';
@@ -210,6 +210,9 @@ if(type == 'genre'){
 
             let titulo = document.querySelector('.titulo-detalle');
             titulo.innerHTML += datos.name;
+
+            let sub1 = document.querySelector('.subtitulo1');
+            sub1.style = 'display:none;'
 
             let theh3 = document.querySelector('.subtitulo2');
             theh3.style = 'display:none;'

@@ -1148,7 +1148,26 @@ img.search-img {
     max-height: 500px !important;
   }
   .scroll-box {
+    margin: 10px;
     height: 320px;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  .scroll-box-at {
+    margin: 10px;
+    height: 320px;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  .scroll-box-artist {
+    margin: 10px;
+    height: 410px;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  .scroll-box-album {
+    margin: 10px;
+    height: 240px;
     overflow: scroll;
     overflow-x: hidden;
   }
