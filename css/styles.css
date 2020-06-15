@@ -32,6 +32,7 @@ body {
   text-align: center;
 }
 
+
 nav .nav_desktop {
   display: none;  
 }
@@ -272,7 +273,7 @@ nav > ul > li:first-child {
   align-items: center;
 }
 
-.artlist img {
+.artlistImg {
   margin: 5px;
   padding: 2px;
   border-radius: 50%;
@@ -295,7 +296,7 @@ nav > ul > li:first-child {
   align-items: center;
 }
 
-.songlists img {
+.songlistsImg {
   margin: 5px;
   padding: 2px;
   border-radius: 4px;
@@ -319,6 +320,7 @@ nav > ul > li:first-child {
   padding: 0;
   text-align: left;
   font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .item-3 {
@@ -677,6 +679,11 @@ input.search-box::-webkit-input-placeholder {
 input:focus {
   outline: none;
 }
+
+button:focus {
+  outline: none;
+}
+
 .search-button {
   border-radius: 50px;
     padding: 11px 20px;
@@ -724,9 +731,6 @@ label {
   font-size: 14px;
 }
 
-.search-padding {
-  padding: 10px 0px;
-}
 
 .track-search-list {
   padding: 0;
@@ -734,8 +738,61 @@ label {
 
 li.detail-margins {
   margin: 3px;
-  padding: 0px 10px;
+  padding: 0px;
 }
+
+img.search-img {
+  width: 100px;
+  
+}
+
+.detail-margins a {
+  margin: 10px 0px;
+}
+
+.h3-inline {
+  font-size: 20px;
+  padding: 10px;
+}
+
+
+
+/*---------------------SPINNER--------------------*/
+
+#spinner{
+  visibility: hidden;
+  width: 80px;
+  height: 80px;
+
+  border: 2px solid #f3f3f31c;
+  border-top:6px solid #7acfe8;
+  border-radius: 100%;
+
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  margin: auto;
+
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  } to {
+      transform: rotate(360deg);
+  }
+}
+
+#spinner.show {
+  visibility: visible;
+}
+
+
+
+
 
 @media(max-width:768px){
   .image-detalle img {
@@ -760,7 +817,7 @@ li.detail-margins {
     gap: 10px;
     margin: 15px;
   } 
-  .artlist img {
+  .artlistImg {
     margin: 5px;
     padding: 2px;
     border-radius: 50%;
@@ -772,7 +829,7 @@ li.detail-margins {
     gap: 10px;
     margin: 15px;
   }
-  .songlists img {
+  .songlistsImg {
     margin: 5px;
     padding: 2px;
     border-radius: 4px;
@@ -932,6 +989,7 @@ li.detail-margins {
   nav .nav_desktop {
     display: grid;
   }
+  
  /*CAM*/
  .favart{
   border-radius: 50%;
@@ -956,7 +1014,7 @@ li.detail-margins {
     border-radius: 50%;
     width: 95px;
   }
-  .songlists img {
+  .songlistsImg {
     margin: 5px;
     padding: 2px;
     border-radius: 4px;
@@ -1101,7 +1159,35 @@ li.detail-margins {
     display: inline-block;
     margin: 0px 30px;
   }
-  
+  .deezer {
+    width: 30%;
+  }
+  .grid-footer-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    bottom: 0;
+    line-height: normal;
+  }
+  .social-icon{
+    padding: 5px;
+    font-size: 15px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .grid-footer-column {
+    display: grid;
+    align-self: center;
+  }
+  .grid-footer-column ul {
+    text-align: center;
+  }
+  .grid-footer-column ul li {
+    display: inline-block;
+  }
+
+
 }
 @media(min-width:1600px){
   nav a {

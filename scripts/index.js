@@ -49,29 +49,29 @@ fetch(urlArtists)
 //topTracks
 let urlTracks = proxy + "https://api.deezer.com/chart/0/tracks";
 
-/*fetch(urlTracks)
+fetch(urlTracks)
     .then(function(response){
         return response.json();
     })
     .then(function(datos){
-        console.log(datos);
         let tracks = datos.data;
         let topTracks = document.querySelector('.chartTracks')
 
         tracks.forEach(function(track){
+            console.log(track);
             let listSongs = document.createElement('div');
             listSongs.classList.add('songlists');
 
             let songImg = document.createElement('img');
-            songImg.src = track.picture_small;
-            songImg.classList.add('.songslistsImg');
+            songImg.src = track.artist.picture;
+            songImg.classList.add('songlistsImg');
             songImg.alt = track.title;
 
             let textSong = document.createElement('div');
-            textSong.classList.add('.song-text');
+            textSong.classList.add('song-text');
 
             let songLink = document.createElement('a');
-            songLink.herf = '#';
+            songLink.href = '#';
 
             let songTitle = document.createElement('h4');
             songTitle.classList.add('item-2');
@@ -97,4 +97,23 @@ let urlTracks = proxy + "https://api.deezer.com/chart/0/tracks";
             listSongs.appendChild(puntitosItem);
             topTracks.appendChild(listSongs);
         })
-    })*/
+        })
+    .catch(function(error){
+        console.log(error);
+    })
+
+//topAlbums
+let urlAlbums = proxy + "https://api.deezer.com/chart/0/albums"
+
+fetch(urlAlbums)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(datos){
+        let albums = datos.data;
+        let topAlbums = document.querySelector('.chartAlbums')
+
+        albums.forEach(function(album){
+            console.log
+        })
+    })
