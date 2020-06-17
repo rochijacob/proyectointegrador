@@ -101,7 +101,7 @@ footer p {
 .nav_desktop {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 6fr 1fr 1fr 1fr;
+  grid-template-columns: 6fr 1fr 1fr 1fr 1fr 1fr 0.25fr;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.171);
   padding: 6px 0px;
@@ -774,7 +774,41 @@ img.search-img {
   visibility: visible;
 }
 
-
+.generos-lista{
+  display: block;
+  align-items: center;
+  width: 100%;
+  margin: 15px;
+}
+.generos-lista img{
+  border-radius: 30px;
+  width: 350px;
+  height: 250px;
+  
+}
+.generos-container {
+  position: relative;
+  width: 350px;
+  border-radius: 30px;
+  justify-self: center; 
+  margin: 5px;
+    padding: 2px;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  
+}
 
 
 @media(max-width:768px){
@@ -862,18 +896,34 @@ img.search-img {
   iframe{
     height: 165px;
   }
-  .generosLista{
+  .generos-lista{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin: 15px;
+    width: 100%;
   }
-  .generosLista img{
-    margin: 5px;
-    padding: 2px;
-    border-radius: 50px;
+  .generos-lista img{
+    border-radius: 30px;
     width: 300px;
+    height: 200px;
   }
+  /* Container needed to position the overlay. Adjust the width as needed */
+.generos-container {
+  position: relative;
+  width: 300px;
+  border-radius: 30px;
+  justify-self: center; 
+  margin: 5px;
+    padding: 2px;
+}
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 
   /*RO*/
   a.logo { 
@@ -1206,7 +1256,27 @@ img.search-img {
   .grid-footer-column ul li {
     display: inline-block;
   }
+  .generos-lista {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .generos-lista img{
+    width: 350px;
+    height: 250px;
+  }
+  .generos-container {
+    width: 350px;
+  }
+  
+  /* The overlay effect - lays on top of the container and over the image */
+  .overlay {
+    transition: .5s ease;
+    opacity:0;
+  }
 
+  /* When you mouse over the container, fade in the overlay title */
+  .generos-container:hover .overlay {
+    opacity: 1;
+  }
 
 }
 @media(min-width:1600px){
