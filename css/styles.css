@@ -51,7 +51,13 @@ a {
   letter-spacing: 1px;
   font-size: 17px;
 }
-  
+
+.nav_desktop a {
+  font-weight: 500;
+  letter-spacing: 1.5;
+}
+
+
 li a .icon {
   text-align: start;
 }
@@ -357,11 +363,7 @@ nav > ul > li:first-child {
 .theartists {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 5px;
-}
-
-.cuadradito {
-  position: relative;
+    gap: 7px;
 }
 
 .main-detail-containter {
@@ -821,6 +823,43 @@ img.search-img {
   
 }
 
+.display_albums {
+  display: none;
+}
+
+
+.container {
+  position: relative;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.over {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 1;
+  background-color: #000000ad;
+  padding: 25px;
+  text-align: center;
+}
+
+.text-artist {
+  font-family: 'Montserrat';
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 20px;
+}
 
 
 @media(max-width:768px){
@@ -942,8 +981,7 @@ img.search-img {
   }
   .theartists {
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 7px;
-    padding: 10px;
+    gap: 10px;
   }
   .main-detail-containter {
     margin: 15px;
@@ -1125,7 +1163,7 @@ img.search-img {
   }
   .theartists {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 10px;
+    gap: 10px;
     padding: 10px;
     margin: 20px 70px;
   }
@@ -1282,6 +1320,27 @@ img.search-img {
   /* When you mouse over the container, fade in the overlay title */
   .generos-container:hover .overlay {
     opacity: 1;
+  }
+  .display_albums {
+    display: block;
+  }
+  
+  .over {
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 0;
+    transition: .5s ease;
+  }
+  
+  .container:hover .over {
+    opacity: 1;
+  }
+  
+  .text-artist {
+    font-size: 20px;
+    top: 50%;
+    line-height: 30px;
   }
 
 }

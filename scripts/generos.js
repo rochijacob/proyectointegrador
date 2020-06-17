@@ -14,7 +14,7 @@ fetch(urlGeneral)
 
         for (let i = 1; i < losGeneros.length; i++) {
             
-            containerGenre += '<a class="generos-container" href="generaldetail.html?id='+ losGeneros[i].id +'&type=genre"><img src="' + losGeneros[i].picture_big + '" alt="" class="image"><div class="overlay">' + losGeneros[i].name + '</div></a>';
+            containerGenre += '<a class="generos-container" href="generaldetail.html?id='+ losGeneros[i].id +'&type=genre"><img src="' + losGeneros[i].picture_big + '" alt="'+ losGeneros[i].name +'" class="image"><div class="overlay">' + losGeneros[i].name + '</div></a>';
 
             
 
