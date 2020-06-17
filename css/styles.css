@@ -786,6 +786,7 @@ img.search-img {
   height: 250px;
   
 }
+
 .generos-container {
   position: relative;
   width: 350px;
@@ -793,6 +794,13 @@ img.search-img {
   justify-self: center; 
   margin: 5px;
     padding: 2px;
+}
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 .overlay {
   position: absolute;
@@ -809,6 +817,7 @@ img.search-img {
   border-bottom-right-radius: 30px;
   
 }
+
 
 
 @media(max-width:768px){
@@ -917,13 +926,7 @@ img.search-img {
   margin: 5px;
     padding: 2px;
 }
-/* Make the image to responsive */
-.image {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
+
 
   /*RO*/
   a.logo { 

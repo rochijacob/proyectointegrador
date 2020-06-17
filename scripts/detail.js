@@ -126,6 +126,9 @@ if(type == 'artist'){
             let someSongs = document.querySelector('.subtitulo1');
             someSongs.innerHTML += '<h4 style="padding: 10px;"> Algunas canciones del artista: </h4>';
 
+            let theh3 = document.querySelector('.subtitulo2');
+            theh3.style = 'display:none;'
+
 
             let topArtist = proxy + datos.tracklist; //LINKEO CON EL TRACKLIST
             fetch(topArtist)
