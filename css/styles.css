@@ -785,14 +785,14 @@ img.search-img {
 }
 .generos-lista img{
   border-radius: 30px;
-  width: 350px;
+  width: 400px;
   height: 250px;
   
 }
 
 .generos-container {
   position: relative;
-  width: 350px;
+  width: 400px;
   border-radius: 30px;
   justify-self: center; 
   margin: 5px;
@@ -1365,5 +1365,12 @@ img.search-img {
 }
   .rounded-img {
     width: 100px;
+  }
+  .generos-lista img{
+    width: 500px;
+    height: 320px;
+  }
+  .generos-container {
+    width: 500px;
   }
 }
