@@ -2,6 +2,7 @@
 let proxy = 'https://cors-anywhere.herokuapp.com/'
 let urlArtists = proxy + "https://api.deezer.com/chart/0/artists";
 
+
 fetch(urlArtists)
     .then(function(response){
         return response.json();
@@ -24,7 +25,7 @@ fetch(urlArtists)
             div2.classList.add('song-text');
 
             let link = document.createElement('a');
-            link.href = '#';
+            link.href = 'generaldetail.html?id='+ artist.id + '&type=artist';
 
             let linktext = document.createElement('h4');
             linktext.classList.add('item-2');
@@ -65,20 +66,20 @@ fetch(urlTracks)
             let songImg = document.createElement('img');
             songImg.src = track.artist.picture;
             songImg.classList.add('songlistsImg');
-            songImg.alt = track.title;
+            songImg.alt = track.title_short;
 
             let textSong = document.createElement('div');
             textSong.classList.add('song-text');
 
             let songLink = document.createElement('a');
-            songLink.href = '#';
+            songLink.href = 'generaldetail.html?id='+ track.id + '&type=track'; 
 
             let songTitle = document.createElement('h4');
             songTitle.classList.add('item-2');
             songTitle.innerHTML = track.title;
 
             let artistLink = document.createElement('a');
-            artistLink.href = '#';
+            artistLink.href = 'generaldetail.html?id='+ track.artist.id + '&type=artist';
 
             let songArtist= document.createElement('p');
             songArtist.classList.add('item-2');
@@ -92,8 +93,8 @@ fetch(urlTracks)
             listSongs.appendChild(textSong);
             textSong.appendChild(songLink);
             songLink.appendChild(songTitle);
-            textSong.appendChild(songArtist);
-            songArtist.appendChild(artistLink);
+            textSong.appendChild(artistLink);
+            artistLink.appendChild(songArtist);
             listSongs.appendChild(puntitosItem);
             topTracks.appendChild(listSongs);
         })
@@ -123,14 +124,14 @@ fetch(urlAlbums)
             albumImg.alt = album.title;
 
             let albumLink = document.createElement('a');
-            albumLink.href = '#';
+            albumLink.href = 'generaldetail.html?id='+ album.id + '&type=album';
             
             let albumTitle = document.createElement('h4');
             albumTitle.classList.add('item-3');
             albumTitle.innerHTML = album.title;
 
             let linkArtist = document.createElement('a');
-            linkArtist.href = '#';
+            linkArtist.href = 'generaldetail.html?id='+ album.artist.id + '&type=artist'
 
             let albumArtist = document.createElement('p');
             albumArtist.classList.add('item-3');
@@ -146,6 +147,5 @@ fetch(urlAlbums)
             listAlbum.appendChild(linkArtist);
             linkArtist.appendChild(albumArtist);
             topAlbums.appendChild(listAlbum);
-
         })
     })
