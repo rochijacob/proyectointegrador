@@ -775,10 +775,11 @@ img.search-img {
 }
 
 .generos-lista{
-  display: block;
+  display: grid;
   align-items: center;
   width: 100%;
   margin: 15px;
+  grid-template-columns: 1fr;
 }
 .generos-lista img{
   border-radius: 30px;
@@ -794,6 +795,7 @@ img.search-img {
   justify-self: center; 
   margin: 5px;
     padding: 2px;
+    align-self: center;
 }
 /* Make the image to responsive */
 .image {
@@ -802,6 +804,7 @@ img.search-img {
   height: auto;
   object-fit: cover;
 }
+
 .overlay {
   position: absolute;
   bottom: 0;

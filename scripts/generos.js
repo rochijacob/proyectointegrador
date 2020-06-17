@@ -12,7 +12,15 @@ fetch(urlGeneral)
         let losGeneros = datos.data;
         containerGenre = '';
 
+        for (let i = 1; i < losGeneros.length; i++) {
+            
+            containerGenre += '<a class="generos-container" href="generaldetail.html?id='+ losGeneros[i].id +'&type=genre"><img src="' + losGeneros[i].picture_big + '" alt="" class="image"><div class="overlay">' + losGeneros[i].name + '</div></a>';
 
+            
+
+        }
+
+        generosLista.innerHTML = containerGenre;
     })
     .catch(function(error) {
         console.log(error);
