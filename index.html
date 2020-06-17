@@ -25,6 +25,7 @@
               <li style="text-align: left;"><a class="icon" href="index.html"><img src="imagenes/logos/blue.png" width="130px"></a></li>
               <div id="show">
                 <li class="hidden"><a href="index.html">HOME</a></li>
+                <li class="hidden"><a href="index.html">GÉNEROS</a></li>
                 <li class="hidden"><a href="artistas.html">ARTISTAS</a></li>
                 <li class="hidden"><a href="albums.html">ALBUMS</a></li>
                 <li class="hidden"><a href="playlist.html">PLAYLIST</a></li>
@@ -37,6 +38,7 @@
             <div class="nav_desktop">
                 <a class="icon_desktop" href="index.html"><img src="imagenes/logos/blue.png" width="130px"></a>
                 <a  class="nav_text"  href="index.html">Home</a>
+                <li class="hidden"><a href="index.html">GÉNEROS</a></li>
                 <a class="nav_text"  href="artistas.html">Artistas</a>
                 <a class="nav_text"  href="albums.html">Albums</a>
                 <a class="nav_text" href="playlist.html">Playlist</a>
@@ -98,20 +100,37 @@
     </div>
     <p>bienvenidxs al reproductor de música favorito de los centennials...</p>
     <h3>enjoy <span style="color:#7acfe8;">&#9786;</span> </h3>
-    <h2>TOP ARTISTAS</h2>
-    <!-- <div class="deezerPicks">
-        <div class="">
-
+    <h2>CHARTS</h2>
+    <img class="favart" src="imagenes/deezer-index.jpg"  alt="logo Deezer b&n">
+    <h2>deezer's picks</h2>
+    <div class="deezerPicks">
+        <div class="deezerArtists">
+            <h2>ARTISTAS</h2>
+            <ul class="chartArtists"></ul>
         </div>
-    </div> -->
+        <div class="deezerAlbums">
+            <h2>ÁLBUMS</h2>
+            <div class="chartAlbums"></div>
+        </div>
+        <div class="deezerTracks">
+            <h2>TRACKS</h2>
+            <div class="chartTracks"></div>
+        </div>
+    </div>
+    <h2>TOP ARTISTAS</h2>
     <div class="topArtists">
         <div class="cam1">
             <img class="favart" src="imagenes/cam.jpg"  alt="type o negative">
                 <h2>cam's picks</h2>
                 <p>incluye artistas como: </p>
-                <ul class="chartArtists">
-                </ul>
-                <!-- <div class="artlist">
+                <div class="artlist">
+                    <img class="artlistImg" src="imagenes/artists/manson-index.jpg" width="100%" alt="Marilyn Manson">
+                    <div class="song-text">
+                        <h4 class="item-2">Marilyn Manson</h4>
+                    </div>
+                    <i class="material-icons">more_horiz</i>
+                </div>
+                <div class="artlist">
                     <img class="artlistImg" src="imagenes/artists/bauhaus-index.jpg" width="100%" alt="Bauhaus">
                     <div class="song-text">
                         <h4 class="item-2">Bauhaus</h4>
@@ -124,7 +143,7 @@
                         <h4 class="item-2">Pulp</h4>
                     </div>
                     <i class="material-icons">more_horiz</i>
-                </div> -->
+                </div>
         </div>
         <div class="rochi1">
             <img class="favart" src="imagenes/rochi.jpg"  alt="the chainsmokers">
@@ -185,9 +204,7 @@
             <iframe width=100% height=300px src="https://www.youtube.com/embed/Ow_qI_F2ZJI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <h2>cam's picks</h2>
             <p>incluye temas como: </p>
-            <div class="chartTracks">
-            </div>
-            <!-- <div class="songlists">
+            <div class="songlists">
                 <img class="songlistsImg" src="imagenes/detail songs/afterall-index.jpg" width="100%" alt="The Man Who Sold the World album cover">
                 <div class="song-text">
                     <h4 class="item-2">After All</h4>
@@ -210,7 +227,7 @@
                     <p class="item-2">The Cure</p>
                 </div>
                 <i class="material-icons">more_horiz</i>
-            </div> -->
+            </div>
         </div>
         <div class="rochi2">
             <iframe width=100% height=300px src="https://www.youtube.com/embed/-PZsSWwc9xA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -276,10 +293,7 @@
         <div class="cam3">
             <h2>cam's picks</h2>
             <p>incluye álbums como: </p>
-            <div class="chartAlbums">
-
-            </div>
-            <!-- <div class="albums-display">
+            <div class="albums-display">
                 <div class="alblist">
                     <img class="alblistimg" src="imagenes/detail songs/bloodykisses-index.jpg" alt="Bloody Kisses">
                     <h4 class="item-3">Bloody Kisses</h4>
@@ -295,7 +309,7 @@
                     <h4 class="item-3">AMO</h4>
                     <p class="item-3">Bring me the Horizon</p>
                 </div>
-            </div>  -->
+            </div> 
         </div>
         <div class="rochi3">
             <h2>rochi's picks</h2>

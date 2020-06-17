@@ -16,12 +16,21 @@ arrayOpciones.forEach(function(unaOpcion){
 })
 
 let spinner = document.getElementById("spinner");
+let searchShadow = document.getElementById("searchShadow");
 
     function showSpinner() {
          spinner.className = "show";
-         setTimeout(() => {
-         spinner.className = spinner.className.replace("show", "");
-        }, 2500);
+         searchShadow.className = "show";
+         /*setTimeout(() => {
+            spinner.className = spinner.className.replace("show", "");
+            searchShadow.className = searchShadow.className.replace("show", "");
+        }, 2500);*/
+
+    }
+
+    function hideSpinner() {
+        spinner.className = spinner.className.replace("show", "");
+        searchShadow.className = searchShadow.className.replace("show", "");
     }
    
 let search = queryStringObj.get('search');
@@ -36,7 +45,7 @@ if(search !== null){
     showSpinner() // ejecuta la funcion spinner SOLO cuando busco algo
 
     let searchResults = document.querySelector('.display-resultados');
-    searchResults.innerHTML += 'Resultados de Busqueda...';
+    searchResults.innerHTML //+= 'Resultados de Busqueda...';
 
     let detailContainer = document.querySelector('.main-detail-containter');
     detailContainer.style = 'padding: 10px 0px;'
@@ -48,6 +57,8 @@ if(search !== null){
     .then(function(datos){
         let lista = document.querySelector('.lista')
         let resultados = datos.data;
+
+        lista.innerHTML = "";
 
         if (option == 'track'){
             resultados.forEach(resultado => { 
@@ -67,6 +78,7 @@ if(search !== null){
                 lista.innerHTML += '<li class="track-search-list"><a href="generaldetail.html?id='+ resultado.id + '&type=' + resultado.type + '" class="a-song">' + '<img src="' + resultado.picture + '" class="rounded-img">' + '<div class="song-text"><h4 class="text-a">' + resultado.name + '</h4></div>' + '<i class="material-icons">keyboard_arrow_right</i>' + '</a></li>';
             });
         }
+        hideSpinner();
     })
     .catch(function(error){
         console.log(error)
