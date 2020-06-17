@@ -550,6 +550,13 @@ p.hide{
   display: grid;
   grid-template-columns: 1fr;
 }
+.grid-footer-column ul {
+  text-align: center;
+  justify-content: space-between;
+}
+.grid-footer-column ul li {
+  display: inline-block;
+}
 
 /* The container <div> - needed to position the dropup content */
 .dropup {
@@ -716,7 +723,9 @@ img.search-img {
   padding: 10px;
 }
 
-
+.add-buttons {
+  display: none;
+}
 
 /*---------------------SPINNER--------------------*/
 
@@ -1165,7 +1174,7 @@ img.search-img {
     padding: 8px 12px;
   }
   .icon_desktop {
-    margin-left: 20px;
+    margin-left: 0px;
   }
   .main-detail-containter{
     margin: 30px 300px;
