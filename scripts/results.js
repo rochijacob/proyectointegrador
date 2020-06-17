@@ -45,7 +45,7 @@ if(search !== null){
     showSpinner() // ejecuta la funcion spinner SOLO cuando busco algo
 
     let searchResults = document.querySelector('.display-resultados');
-    searchResults.innerHTML //+= 'Resultados de Busqueda...';
+    //searchResults.innerHTML += 'Resultados de Busqueda...'; --> creo que queda más bello sin esto, pero lo dejo a tu criterio jeje
 
     let detailContainer = document.querySelector('.main-detail-containter');
     detailContainer.style = 'padding: 10px 0px;'
@@ -78,7 +78,7 @@ if(search !== null){
                 lista.innerHTML += '<li class="track-search-list"><a href="generaldetail.html?id='+ resultado.id + '&type=' + resultado.type + '" class="a-song">' + '<img src="' + resultado.picture + '" class="rounded-img">' + '<div class="song-text"><h4 class="text-a">' + resultado.name + '</h4></div>' + '<i class="material-icons">keyboard_arrow_right</i>' + '</a></li>';
             });
         }
-        hideSpinner();
+        hideSpinner(); //oculta el spinner cuando termina de cargar
     })
     .catch(function(error){
         console.log(error)

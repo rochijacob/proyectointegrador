@@ -862,6 +862,19 @@ img.search-img {
   iframe{
     height: 165px;
   }
+  .generosLista{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 15px;
+  }
+  .generosLista img{
+    margin: 5px;
+    padding: 2px;
+    border-radius: 50px;
+    width: 300px;
+  }
+
   /*RO*/
   a.logo { 
     width: 50%;
