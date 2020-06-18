@@ -510,6 +510,9 @@ p.hide{
 .deezer {
   width: 50%;
 }
+main {
+  min-height: 530px;
+}
 
 .dropdown {
   position: relative;
@@ -1003,6 +1006,33 @@ img.search-img {
     font-size: 30px;
     text-decoration: none;
   }
+  .deezer {
+    width: 50%;
+  }
+  .grid-footer-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    bottom: 0;
+    line-height: normal;
+  }
+  .social-icon{
+    padding: 5px;
+    font-size: 15px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .grid-footer-column {
+    display: grid;
+    align-self: center;
+  }
+  .grid-footer-column ul {
+    text-align: center;
+  }
+  .grid-footer-column ul li {
+    display: inline-block;
+  }
   .armatuplaylist{
     font-size: 20px;
   }
@@ -1024,6 +1054,10 @@ img.search-img {
     display: block;
     float: right;
   }
+  main {
+    min-height: 610px;
+  }
+  
 }
 
 
@@ -1266,7 +1300,9 @@ img.search-img {
   .generos-container {
     width: 350px;
   }
-  
+  main {
+    min-height: 700px;
+  }
   /* The overlay effect - lays on top of the container and over the image */
   .overlay {
     transition: .5s ease;
@@ -1328,5 +1364,8 @@ img.search-img {
   }
   .generos-container {
     width: 500px;
+  }
+  main {
+    min-height: 910px;
   }
 }
