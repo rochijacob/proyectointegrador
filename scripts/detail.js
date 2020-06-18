@@ -4,6 +4,18 @@ let idGeneral = datos.get('id');//Nos permite obtener el id de la url
 let type = datos.get('type'); 
 console.log(type);
 
+let spinner = document.getElementById("spinner");
+let searchShadow = document.getElementById("searchShadow");
+
+    function showSpinner() {
+         spinner.className = "show";
+         searchShadow.className = "show";
+    }
+
+    function hideSpinner() {
+        spinner.className = spinner.className.replace("show", "");
+        searchShadow.className = searchShadow.className.replace("show", "");
+    }
 
 let proxy = "https://cors-anywhere.herokuapp.com/";
 let urlGeneral = proxy + 'https://api.deezer.com/' + type + '/' + idGeneral; //La ruta tiene cors, los datos de deezer y el id, cambio el path al de 1 track
@@ -23,10 +35,10 @@ fetch(urlGeneral)
         titulo.innerHTML += datos.title;
 
         let interprete = document.querySelector('.subtitulo1');
-        interprete.innerHTML += '<h3> Artista: ' + '<a href ="generaldetail.html?id=' + datos.artist.id  + '&type=artist">'+ datos.artist.name +'</a></h3>';
+        interprete.innerHTML += '<h3> <span style="color:#7acfe8;">ARTISTA: </span>' + '<a href ="generaldetail.html?id=' + datos.artist.id  + '&type=artist">'+ datos.artist.name +'</a></h3>';
 
         let album = document.querySelector('.subtitulo2');
-        album.innerHTML += 'Album: ' + '<a href ="generaldetail.html?id=' + datos.album.id  +'&type=album">'+ datos.album.title +'</a>';
+        album.innerHTML += '<span style="color:#7acfe8;">ÁLBUM: </span>' + '<a href ="generaldetail.html?id=' + datos.album.id  +'&type=album">'+ datos.album.title +'</a>';
 
         //Agregamos el player
         let player = document.querySelector('.widget-player');
@@ -40,8 +52,6 @@ fetch(urlGeneral)
 
         let addButtons = document.querySelector('.add-buttons');
         addButtons.style = 'display:block;'; 
-
-
     })
     .catch(function(error) {
         console.log(error);
@@ -65,7 +75,7 @@ fetch(urlGeneral)
 
     //me fijo que no este en la lista y cambio el texto del boton
     if(playlist.includes(idGeneral)){ //Hay que agregar el id del track
-        document.querySelector('.agregar').innerHTML = "Quitar de la playlist"; 
+        document.querySelector('.agregar').innerHTML = "quitar de la playlist"; 
     }
 
 
@@ -81,12 +91,12 @@ fetch(urlGeneral)
             //Si el track esta, tenemos que quitarlo. Tenemos que encontar el track dentro del array
             let indiceEnElArray = playlist.indexOf(idGeneral);
             playlist.splice(indiceEnElArray, 1);
-            document.querySelector('.agregar').innerHTML = "Agregar a playlist";
+            document.querySelector('.agregar').innerHTML = "agregar a playlist";
             console.log(playlist);
             
         } else {
             playlist.push(idGeneral);
-            document.querySelector('.agregar').innerHTML = "Quitar de la playlist";
+            document.querySelector('.agregar').innerHTML = "quitar de la playlist";
             }
 
         /*
@@ -124,7 +134,7 @@ if(type == 'artist'){
             titulo.innerHTML += datos.name;
             
             let someSongs = document.querySelector('.subtitulo1');
-            someSongs.innerHTML += '<h4 style="padding: 10px;"> Algunas canciones del artista: </h4>';
+            someSongs.innerHTML += '<h4 style="padding: 10px;"><span style="color:#7acfe8;">TOP TRACKS</span></h4>';
 
             let theh3 = document.querySelector('.subtitulo2');
             theh3.style = 'display:none;'
@@ -180,9 +190,9 @@ if(type == 'album'){
             let genres = datos.genres.data;
             let elGenero = '';
             for (let i = 0; i < 1; i++){
-                elGenero = '<h3 class="h3-inline"> Genero: ' + '<a href="generaldetail.html?id=' + datos.genre_id + '&type=genre">' + genres[i].name + '</a></h3>';
+                elGenero = '<h3 class="h3-inline"><span style="color:#7acfe8;">GÉNERO: </span> ' + '<a href="generaldetail.html?id=' + datos.genre_id + '&type=genre">' + genres[i].name + '</a></h3>';
             }
-            interprete.innerHTML += '<h3 class="h3-inline"> Artista: ' + '<a href ="generaldetail.html?id=' + datos.artist.id  + '&type=artist">'+ datos.artist.name +'</a></h3>' + elGenero;
+            interprete.innerHTML += '<h3 class="h3-inline"><span style="color:#7acfe8;">ARTISTA: </span>' + '<a href ="generaldetail.html?id=' + datos.artist.id  + '&type=artist">'+ datos.artist.name +'</a></h3>' + elGenero;
 
             let releaseDate = document.querySelector('.subtitulo2');
             releaseDate.innerHTML += datos.release_date;
@@ -217,7 +227,7 @@ if(type == 'genre'){
         .then(function(datos){
             console.log(datos);
             let image = document.querySelector(".image-detalle");
-            image.innerHTML += '<img src="' + datos.picture_big + '"style="border-radius: 10px 0px 0px 10px;">';
+            image.innerHTML += '<img src="' + datos.picture_big + '"style="border-radius: 10px 10px 10px 10px;">';
 
             let titulo = document.querySelector('.titulo-detalle');
             titulo.innerHTML += datos.name;

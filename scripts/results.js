@@ -21,11 +21,6 @@ let searchShadow = document.getElementById("searchShadow");
     function showSpinner() {
          spinner.className = "show";
          searchShadow.className = "show";
-         /*setTimeout(() => {
-            spinner.className = spinner.className.replace("show", "");
-            searchShadow.className = searchShadow.className.replace("show", "");
-        }, 2500);*/
-
     }
 
     function hideSpinner() {
