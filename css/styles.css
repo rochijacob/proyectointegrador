@@ -269,10 +269,6 @@ nav > ul > li:first-child {
   to {opacity: 1}
 }
 
-.topArtists {
-    display: grid;
-}
-
 .favart {
   border-radius: 50%;
   height: 110px;
@@ -283,7 +279,7 @@ nav > ul > li:first-child {
   background-color: #52525241;
   border-radius: 10px;
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.116);
-  margin: 7px;
+  margin: 10px;
   display: grid;
   grid-template-columns: 0.8fr 2.5fr 0.8fr;
   align-items: center;
@@ -319,6 +315,11 @@ nav > ul > li:first-child {
   width: 70px;
 }
 
+.chartAlbums{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .albums-display{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -350,17 +351,14 @@ nav > ul > li:first-child {
 /*hover details*/
 .agregar:hover {
   color: #7acfe8;
-  transition: 0.35s;
 }
 
 .tops:hover {
   color: #7acfe8;
-  transition: 0.35s;
 }
 
 .verPlaylist:hover {
   color: #7acfe8;
-  transition: 0.35s;
 }
 
 /*RO*/
@@ -674,7 +672,7 @@ img.search-img {
 }
 
 #spinner{
-  visibility: hidden;
+  display: none;
   width: 80px;
   height: 80px;
 
@@ -702,13 +700,13 @@ img.search-img {
 
 #spinner.show, #searchShadow.show {
   visibility: visible;
+  display: block;
 }
 
 .generos-lista{
   display: grid;
   align-items: center;
   width: 100%;
-  margin: 15px;
   grid-template-columns: 1fr;
 }
 .generos-lista img{
@@ -790,12 +788,12 @@ img.search-img {
 }
 
 
-@media(max-width:768px){
+/*@media(max-width:768px){
   .image-detalle img {
     width: 100%;
   }
 }
-
+*/
 
 @media(min-width:768px){
   /*CAM*/
@@ -807,6 +805,12 @@ img.search-img {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     margin: 15px;
+  }
+  .chartAlbums{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin: 7px;
   }
   .favart {
     border-radius: 50%;
@@ -837,7 +841,6 @@ img.search-img {
     border-radius: 4px;
     width: 50px;
   }
-
   .topAlbums{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -857,7 +860,7 @@ img.search-img {
     margin: 5px;
     padding: 2px;
     border-radius: 4px;
-    width: 190px;
+    width: 100px;
   }
   .item-2 {
     margin: 10px;
@@ -879,7 +882,6 @@ img.search-img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    margin: 15px;
     width: 100%;
   }
   .generos-lista img{
@@ -1055,7 +1057,7 @@ img.search-img {
     margin: 5px;
     padding: 2px;
     border-radius: 4px;
-    width: 350px;
+    width: 200px;
   }
   .deezer {
     width: 35%;
@@ -1281,7 +1283,10 @@ img.search-img {
   .generos-container {
     width: 500px;
   }
-  main {
+  .alblistImg{
+    width: 300px;
+  }
+    .main {
     min-height: 910px;
   }
 }
