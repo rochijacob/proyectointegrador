@@ -1,7 +1,7 @@
-//topArtists
-let proxy = 'https://cors-anywhere.herokuapp.com/'
-let urlArtists = proxy + "https://api.deezer.com/chart/0/artists";
+let proxy = 'https://cors-anywhere.herokuapp.com/';
 
+//topArtists
+let urlArtists = proxy + "https://api.deezer.com/chart/0/artists";
 
 fetch(urlArtists)
     .then(function(response){
@@ -114,6 +114,10 @@ fetch(urlAlbums)
         let albums = datos.data;
         let topAlbums = document.querySelector('.chartAlbums')
 
+        let count = 0;
+
+        console.log(albums);
+
         albums.forEach(function(album){
             let listAlbum = document.createElement('div');
             listAlbum.classList.add('alblist');
@@ -146,6 +150,7 @@ fetch(urlAlbums)
             albumLink.appendChild(albumTitle);
             listAlbum.appendChild(linkArtist);
             linkArtist.appendChild(albumArtist);
-            topAlbums.appendChild(listAlbum);
+            count++;
+            if (count < 7) topAlbums.appendChild(listAlbum);
         })
     })

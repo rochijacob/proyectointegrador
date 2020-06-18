@@ -21,11 +21,13 @@ let proxy = "https://cors-anywhere.herokuapp.com/";
 let urlGeneral = proxy + 'https://api.deezer.com/' + type + '/' + idGeneral; //La ruta tiene cors, los datos de deezer y el id, cambio el path al de 1 track
 
 if(type == 'track'){
+    showSpinner();
 fetch(urlGeneral)
     .then(function(response){
         return response.json();
     })
     .then(function(datos){
+
         console.log(datos); //Me va a dar los datos de 1 cancion
         //Teng que capturar titulo, interprete, y album
         let image = document.querySelector(".image-detalle");
@@ -43,19 +45,20 @@ fetch(urlGeneral)
         //Agregamos el player
         let player = document.querySelector('.widget-player');
         player.innerHTML += '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=600&height=92&color=7acfe8&layout=dark&size=medium&type=tracks&id=' + idGeneral + '&app_id=1" width="80%" height="92"></iframe>';
-
-        //let addButtons = document.querySelector('.add-buttons');
-        //addButtons.innerHTML += '<p><a href="#" class="agregar">Agregar a playlist</a></p><p><a href="index.html" class="tops">Volver a Home</a></p><p><a href="playlist.html">Ver Playlist</a></p>'
         
         let theh3 = document.querySelector('.subtitulo2');
         theh3.style = 'display:block;';
 
         let addButtons = document.querySelector('.add-buttons');
-        addButtons.style = 'display:block;'; 
+        addButtons.style = 'display:block;';
+        hideSpinner();
     })
     .catch(function(error) {
         console.log(error);
     })
+
+
+
 
     //pasos para agregar temas a una playlist
 
@@ -108,14 +111,14 @@ fetch(urlGeneral)
         //Paso 3 guardar lista en local Storage
         let playlistParaStorage = JSON.stringify(playlist);
         localStorage.setItem('playlist', playlistParaStorage);
-        console.log(localStorage);
-        
+        console.log(localStorage);  
     })
 
 }
 
 
 if(type == 'artist'){
+    showSpinner();
     fetch(urlGeneral)
         .then(function(response){
             return response.json();
@@ -158,13 +161,11 @@ if(type == 'artist'){
                         
                     }
                     lista.innerHTML += theSong
-
-                    
                 })
                 .catch(function(error) {
                     console.log(error);
                 }) 
-
+            hideSpinner();
         })
         .catch(function(error) {
             console.log(error);
@@ -172,6 +173,7 @@ if(type == 'artist'){
 }
 
 if(type == 'album'){
+    showSpinner();
     fetch(urlGeneral)
         .then(function(response){
             return response.json();
@@ -207,9 +209,7 @@ if(type == 'album'){
                 
             }
             lista.innerHTML = someTracks
-            
-            
-
+            hideSpinner();
         })
         .catch(function(error) {
             console.log(error);
@@ -217,8 +217,7 @@ if(type == 'album'){
 }
 
 if(type == 'genre'){
-    
-    
+    showSpinner();    
     fetch(urlGeneral)
         .then(function(response){
             return response.json();
@@ -260,9 +259,7 @@ if(type == 'genre'){
                 }
 
                 lista.innerHTML = theArtist;
-                
-                
-
+                hideSpinner();
             })
             .catch(function(error) {
                 console.log(error);
