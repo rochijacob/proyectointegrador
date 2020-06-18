@@ -114,8 +114,6 @@ fetch(urlAlbums)
         let albums = datos.data;
         let topAlbums = document.querySelector('.chartAlbums')
 
-        let count = 0;
-
         console.log(albums);
 
         albums.forEach(function(album){
@@ -150,7 +148,6 @@ fetch(urlAlbums)
             albumLink.appendChild(albumTitle);
             listAlbum.appendChild(linkArtist);
             linkArtist.appendChild(albumArtist);
-            count++;
-            if (count < 7) topAlbums.appendChild(listAlbum);
+            topAlbums.appendChild(listAlbum);
         })
     })

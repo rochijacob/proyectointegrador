@@ -268,6 +268,8 @@ nav > ul > li:first-child {
   to {opacity: 1}
 }
 
+/*termina el carousel*/
+
 .favart {
   border-radius: 50%;
   height: 110px;
@@ -542,12 +544,6 @@ main {
 
 /*MEDIA QUERIES*/
 
-/* @media(max-width:768px){
-  .albums-display{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-} */
 
 /*SEARCH*/
 
@@ -786,18 +782,24 @@ img.search-img {
   line-height: 20px;
 }
 
-
-/*@media(max-width:768px){
-  .image-detalle img {
-    width: 100%;
-  }
-}
-*/
+/*MEDIA QUERIES*/
 
 @media(min-width:768px){
   /*CAM*/
   .text{
     font-size: 18px;
+  }
+  .chartArtists{
+    max-height: 500px;
+    overflow-y: scroll;
+  }
+  .chartAlbums{
+    max-height: 500px;
+    overflow-y: scroll;
+  }
+  .chartTracks{
+    max-height: 500px;
+    overflow-y: scroll;
   }
   .deezerPicks{
     display: grid;
