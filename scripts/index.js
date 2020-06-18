@@ -8,11 +8,11 @@ fetch(urlArtists)
         return response.json();
     })
     .then(function(datos){
-        console.log(datos);
         let artists = datos.data;
         let topArtists = document.querySelector('.chartArtists');
 
         artists.forEach(function(artist){
+            console.log(artist);
             let div = document.createElement('div');
             div.classList.add('artlist');
             
@@ -114,9 +114,8 @@ fetch(urlAlbums)
         let albums = datos.data;
         let topAlbums = document.querySelector('.chartAlbums')
 
-        console.log(albums);
-
         albums.forEach(function(album){
+            console.log(album);
             let listAlbum = document.createElement('div');
             listAlbum.classList.add('alblist');
 

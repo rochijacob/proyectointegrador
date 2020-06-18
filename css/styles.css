@@ -861,7 +861,7 @@ img.search-img {
     margin: 5px;
     padding: 2px;
     border-radius: 4px;
-    width: 100px;
+    width: 125px;
   }
   .item-2 {
     margin: 10px;
@@ -957,6 +957,9 @@ img.search-img {
     width: 50px;
     text-align: center;
     text-decoration: none;
+  }
+  .social-icon:hover{
+    color:#7acfe8
   }
   .grid-footer-column {
     display: grid;
@@ -1058,7 +1061,7 @@ img.search-img {
     margin: 5px;
     padding: 2px;
     border-radius: 4px;
-    width: 200px;
+    width: 175px;
   }
   .deezer {
     width: 35%;
@@ -1285,7 +1288,7 @@ img.search-img {
     width: 500px;
   }
   .alblistImg{
-    width: 300px;
+    width: 350px;
   }
     .main {
     min-height: 910px;
