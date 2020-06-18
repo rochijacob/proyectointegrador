@@ -500,6 +500,17 @@ p.hide{
   visibility: hidden;
   font-size: 8px;
 }
+.grid-footer-column ul {
+  display: flex;
+  justify-content: space-around;
+}
+.grid-footer-column ul li {
+  display: inline-block;
+}
+.deezer {
+  width: 50%;
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
