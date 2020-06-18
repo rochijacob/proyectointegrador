@@ -46,7 +46,7 @@ li {
 a {
   text-decoration: none;
   color: #f2f2f2;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
   font-size: 17px;
@@ -903,7 +903,7 @@ img.search-img {
     font-family: 'Montserrat', sans-serif;
   }
   iframe{
-    height: 165px;
+    height: 92px;
   }
   .generos-lista{
     display: grid;
@@ -1163,10 +1163,10 @@ img.search-img {
     font-size: 20px;
   }
   .width {
-    margin: 30px 100px;
+    margin: 30px 110px;
   }
   .image-detalle img {
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px 10px 10px 10px;
   }
   /*LOLO*/
   .playlist{
