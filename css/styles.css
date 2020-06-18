@@ -392,11 +392,6 @@ nav > ul > li:first-child {
     margin-bottom: 10px;
 }
 
-.some-songs {
-    text-align: left;
-    margin: 15px 8px;
-    
-}
 
 .albums {
   margin: 0 auto;
@@ -408,10 +403,7 @@ nav > ul > li:first-child {
 }
 
 
-.some-albums p {
-  margin: 0 auto;
-  font-size: 11px;
-}
+
 
 .a-song {
     background-color: #52525241;
@@ -434,33 +426,11 @@ nav > ul > li:first-child {
     padding: 0;
 }
 
-.item-1 {
-  margin: 10px;
-  padding: 0;
-  text-align: left;
-  font-size: 14px;
-}
-
 .song-text p {
     font-size: 15px;
     padding: 0;
 }
 
-.detail-tt-text {
-    font-size: 25px;
-    padding: 10px;
-    letter-spacing: 1.8px;
-    word-spacing: 10px;
-}
-
-.detail-image {
-    padding: 10px;
-    float: right;
-}
-
-.detail-image-desktop {
-  display: none;
-}
 
 .titulo-detalle {
   padding: 15px;
@@ -489,7 +459,6 @@ p.followers {
   font-size: 18px;
   letter-spacing: 1.8px;
 }
-
 
 
 /*LOLO*/
@@ -946,19 +915,7 @@ img.search-img {
   .main-detail-containter {
     margin: 15px;
   }
-  .detail-tt-text {
-    padding-top: 20px;
-    font-size: 30px;
-  }
-  .detail-image img {
-    width: 227px;
-    margin-right: 40px;
-  }
 
-  .some-songs {
-    margin-left: 20px;
-    font-size: 22px;
-  }
   .the-songs {
     margin: 0px 40px 0px 40px;
   }
@@ -975,31 +932,6 @@ img.search-img {
   .albums {
     gap: 10px;
     padding: 0 20px;
-  }
-  .some-albums {
-    display: inline-block;
-    position: relative;
-  }
-  .some-albums .album-text {
-    position: absolute;
-    z-index: 666;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 90%;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.568);
-    padding: 2px;
-  }
-  .some-albums p {
-    font-size: 14px;
-  }
-  .socialmedia-detail {
-    margin: 30px 100px;
-    padding: 10px 80px 20px; 
-  }
-  .back {
-    padding: 10px 20px;
   }
   /*LOLO*/
 
@@ -1177,22 +1109,9 @@ img.search-img {
   .rounded-img {
     width: 90px;
   }
-  .some-songs {
-    margin: 40px 20px;
-  }
   .albums {
     margin: 0 40px;
     gap: 35px
-  }
-  .some-albums .album-text {
-    top: 92%;
-  }
-  .some-albums p {
-    font-size: 18px;
-  }
-  .back {
-    padding: 20px 30px;
-    font-size: 20px;
   }
   .width {
     margin: 30px 110px;
@@ -1345,9 +1264,6 @@ img.search-img {
     margin-left: 0px;
   }
   .main-detail-containter{
-    margin: 30px 300px;
-  }
-  .socialmedia-detail {
     margin: 30px 300px;
   }
   .track-search-list {

@@ -44,6 +44,7 @@ fetch(urlGeneral)
 
         //Agregamos el player
         let player = document.querySelector('.widget-player');
+        player.style = 'padding: 20px 0px;'
         player.innerHTML += '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=600&height=92&color=7acfe8&layout=dark&size=medium&type=tracks&id=' + idGeneral + '&app_id=1" width="80%" height="92"></iframe>';
         
         let theh3 = document.querySelector('.subtitulo2');
