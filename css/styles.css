@@ -321,11 +321,6 @@ nav > ul > li:first-child {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.albums-display{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
 .alblistImg{
   margin: 5px;
   padding: 2px;
