@@ -439,12 +439,27 @@ nav > ul > li:first-child {
   padding: 10px;
 }
 
+.subtitulo1 > h3 > a:hover {
+  background: #fcfcfccc;
+    color: black;
+    transition: 0.5s;
+    background-size: 4px 4px;
+}
+
 .subtitulo2 {
   padding: 10px;
 }
 
+.subtitulo2 > a:hover {
+  background: #fcfcfccc;
+    color: black;
+    transition: 0.5s;
+    background-size: 4px 4px;
+}
+
 .image-detalle img {
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .width {
@@ -777,7 +792,25 @@ img.search-img {
   line-height: 20px;
 }
 
+
 /*MEDIA QUERIES*/
+
+@media(max-width:768px){
+  .albums-display{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .image-detalle img {
+    width: 100%;
+  }
+}
+
+@media(max-width: 375px ){
+  .image-detalle > img {
+    width: 100%;
+  }
+}
+
 
 @media(min-width:768px){
   /*CAM*/
@@ -872,7 +905,7 @@ img.search-img {
     font-family: 'Montserrat', sans-serif;
   }
   iframe{
-    height: 92px;
+    height: 91px;
   }
   .generos-lista{
     display: grid;
@@ -1117,7 +1150,7 @@ img.search-img {
     margin: 30px 110px;
   }
   .image-detalle img {
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 20px 0px 0px 20px;
   }
   /*LOLO*/
   .playlist{

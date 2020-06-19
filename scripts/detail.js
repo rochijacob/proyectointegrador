@@ -31,7 +31,7 @@ fetch(urlGeneral)
         console.log(datos); //Me va a dar los datos de 1 cancion
         //Teng que capturar titulo, interprete, y album
         let image = document.querySelector(".image-detalle");
-        image.innerHTML += '<img src="' + datos.album.cover_big + '"style="border-radius: 10px 10px 10px 10px;">';
+        image.innerHTML += '<img src="' + datos.album.cover_big + '">';
         
         let titulo = document.querySelector('.titulo-detalle');
         titulo.innerHTML += datos.title;
@@ -79,7 +79,7 @@ fetch(urlGeneral)
 
     //me fijo que no este en la lista y cambio el texto del boton
     if(playlist.includes(idGeneral)){ //Hay que agregar el id del track
-        document.querySelector('.agregar').innerHTML = "quitar de la playlist"; 
+        document.querySelector('.agregar').innerHTML = "Quitar de la playlist"; 
     }
 
 
@@ -95,12 +95,12 @@ fetch(urlGeneral)
             //Si el track esta, tenemos que quitarlo. Tenemos que encontar el track dentro del array
             let indiceEnElArray = playlist.indexOf(idGeneral);
             playlist.splice(indiceEnElArray, 1);
-            document.querySelector('.agregar').innerHTML = "agregar a playlist";
+            document.querySelector('.agregar').innerHTML = "Agregar a playlist";
             console.log(playlist);
             
         } else {
             playlist.push(idGeneral);
-            document.querySelector('.agregar').innerHTML = "quitar de la playlist";
+            document.querySelector('.agregar').innerHTML = "Quitar de la playlist";
             }
 
         /*
