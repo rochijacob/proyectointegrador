@@ -163,6 +163,10 @@ nav > ul > li:first-child {
 }
 
 /*CAM*/
+.welcome{
+  font-weight: normal !important;
+}
+
 .deezerPicks h2 {
   color: #7acfe8
 }
@@ -714,16 +718,17 @@ img.search-img {
   width: 100%;
   grid-template-columns: 1fr;
 }
+
 .generos-lista img{
   border-radius: 30px;
-  width: 400px;
+  width: 350px;
   height: 250px;
   
 }
 
 .generos-container {
   position: relative;
-  width: 400px;
+  width: 350px;
   border-radius: 30px;
   justify-self: center; 
   margin: 5px;
@@ -803,6 +808,9 @@ img.search-img {
   .image-detalle img {
     width: 100%;
   }
+  .playerWidget{
+    width: 100%;
+  }
 }
 
 @media(max-width: 375px ){
@@ -810,7 +818,6 @@ img.search-img {
     width: 100%;
   }
 }
-
 
 @media(min-width:768px){
   /*CAM*/
@@ -1150,16 +1157,15 @@ img.search-img {
     margin: 30px 110px;
   }
   .image-detalle img {
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 10px 0px 0px 10px;
   }
   /*LOLO*/
   .playlist{
-    font-size: 50px;
+    font-size: 40px;
     text-decoration: none;
-
   }
   .armatuplaylist{
-    font-size: 35px;
+    font-size: 30px;
   }
   .main-detail-containter .the-songs{
     width: 100%;

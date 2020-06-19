@@ -1,3 +1,4 @@
+console.log('Welcome to our kingdom...');
 let proxy = 'https://cors-anywhere.herokuapp.com/';
 
 //topArtists
