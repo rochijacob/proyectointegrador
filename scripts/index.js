@@ -114,8 +114,10 @@ fetch(urlAlbums)
         let albums = datos.data;
         let topAlbums = document.querySelector('.chartAlbums')
 
+        let count = 0;
+
         albums.forEach(function(album){
-            console.log(album);
+            console.log(album)
             let listAlbum = document.createElement('div');
             listAlbum.classList.add('alblist');
 
@@ -147,6 +149,7 @@ fetch(urlAlbums)
             albumLink.appendChild(albumTitle);
             listAlbum.appendChild(linkArtist);
             linkArtist.appendChild(albumArtist);
-            topAlbums.appendChild(listAlbum);
+            count++;
+            if (count < 10) topAlbums.appendChild(listAlbum);
         })
     })
